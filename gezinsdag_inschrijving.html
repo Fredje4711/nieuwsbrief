@@ -1,171 +1,162 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
+ <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <title>Diabetes Liga Limburg gezinsdag 2022</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <META NAME="Keywords" CONTENT="diabetesligalimburg, diabetesligalimburg.be , Diabetes,  Diabetes Liga,">
+  <META NAME="Description" CONTENT="Diabetes Liga  gezinsdag 2022">
+  <META NAME="Robots" CONTENT="index, follow, all"> 
+  <META NAME="Author" CONTENT="diabetes liga Limburg">
+  <META NAME="Reply-to" CONTENT="diabetesligalimburg@gmail.com">
+  
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
    
  <style>
-  /* --- BASIS CORRECTIE --- */
-  * {
-    box-sizing: border-box; /* Voorkomt dat elementen buiten het scherm vallen door padding */
-  }
+  /* --- BASIS CORRECTIES VOOR GSM --- */
+  * { box-sizing: border-box; }
 
   html, body {
     font-family: "Ubuntu", sans-serif; 
-    font-size:17px; line-height: 19px; font-weight: 500;
-    text-align: center; background-color:#ffffff; margin:0; padding:0;
-  }
+    font-size:17px; line-height: 19px;  font-weight: 500;
+	text-align: center; background-color:#ffffff; margin:0; padding:0; }
       
-  ::placeholder { color: red; font-weight:normal; font-size:0.90em;}
+	::placeholder { color: red; font-weight:normal; font-size:0.90em;}
 	
-  #content { 
-    display:inline-block; position: relative;
-    width: 720px; height:auto;
-    background-color:#dde7e6; color:#333; 
-  }
+	 #content { 
+     display:inline-block; position: relative;
+     width: 100%; max-width: 720px; height:auto;
+     background-color:#dde7e6; color:#333; }
     
-  #top { 
-    display: flex; flex-wrap: wrap; justify-content: space-between;
-    width:100%; height:auto; background-color: #663ab7; color:#ffffff;
-    font-size:20px; line-height:21px;
-  }
+    #top { 
+	    display: flex; flex-wrap: wrap; justify-content: space-between;
+        width:100%; height:auto; background-color: #663ab7; color:#ffffff;
+	    font-size:20px; line-height:21px; }
 	
-  #top div:nth-child(1) { width:100%; padding: 5px 10px 3px 10px; font-size:32px; line-height:34px; }
-  #top div:nth-child(2) { width:100%; height:11px; }
-  #top div:nth-child(n + 3) { padding: 1px 10px 1px 10px; }
-  #top div:nth-child(5) { width:100%; height:1px; }
-  #top div:nth-child(8) { width:100%; font-size:28px; line-height:32px; }
+	#top div:nth-child(1) { width:100%; padding: 5px 10px 3px 10px; font-size:32px; line-height:34px; }
+    #top div:nth-child(2) { width:100%; height:11px; }
+    #top div:nth-child(n + 3) { padding: 1px 10px 1px 10px; }
+    #top div:nth-child(5) { width:100%; height:1px; }
+    #top div:nth-child(8) { width:100%;  font-size:28px; line-height:32px; }
     
-  #myForm { 
-    display:block; position:relative;
-    width:615px; max-width:615px; height:auto;
-    left:35px; top:-24px;
-    background-color:#ffffff; 
-    border-top:6px #B388FF solid; border-right:1px #B388FF solid;
-    border-left:1px #B388FF solid; border-bottom:1px #b388ff solid; 
-    text-align:left; padding:15px 20px 15px 20px; margin-bottom: 20px;
-  }
+	#myForm { 
+	   display:block; position:relative;
+	   width:615px; max-width:95%; height:auto;
+	   left:35px; top:-24px;
+	   background-color:#ffffff; 
+	   border-top:6px #B388FF solid; border-right:1px #B388FF solid;
+	   border-left:1px #B388FF solid; border-bottom:1px #b388ff solid; 
+	   text-align:left; padding:15px 20px 15px 20px; margin-bottom: 20px; }
 
-  label { display: block; position: relative; margin: 2px 10px 2px 0; }
+	label { display: block; position: relative; margin: 2px 10px 2px 0; }
 
-  input[type=text], textarea, select {
-    display: block; border: 1px #a0a0c0 solid;
-    font-size:1em; font-weight: 500; line-height: 1.15em; width: 100%;
-  }
+    input[type=text], textarea, select {
+      display: block; border: 1px #a0a0c0 solid;
+      font-size:1em; font-weight: 500; line-height: 1.15em; width: 100%; }
 	    
-  .grp { 
-    display:flex; flex-direction:row; background-color:#ffffff;
-    justify-content:space-between; align-items:flex-start; 
-    width:595px; margin:0 0 13px 0; 
-  }  
+	 .grp { 
+	   display:flex; flex-direction:row; background-color:#ffffff;
+	   justify-content:space-between; align-items:flex-start; 
+	   width:595px; max-width:100%; margin:0 0 13px 0; }  
 	
-  .divLeft, .divcenter, .divright { display:block; text-align:left; margin: 0; }
-  .divLeft { margin-left: 20px; }
+	 .divLeft, .divcenter, .divright { display:block; text-align:left; margin: 0; }
+	 .divLeft { margin: 0 0 0 20px; }
  	
-  .programma {
-    display:flex; flex-direction:row; justify-content:flex-start; 
-    align-items:flex-start; width:80%; margin-bottom:3px; 
-  }
-  .programma div:nth-child(1) { display:inline-block; white-space:nowrap; margin-left:20px; }  
-  .programma div:nth-child(2) { display:inline-block; margin-left: 15px; }  
-
-  #showBedrag { display: none; }
+	 .programma {
+	   display:flex; flex-direction:row; justify-content:flex-start; 
+	   align-items:flex-start; width:100%; margin-bottom:3px; }
+	  
+	 .programma div:nth-child(1) { display:inline-block; white-space:nowrap; margin-left:20px; min-width:85px; }  
+	 .programma div:nth-child(2) { display:inline-block; margin-left: 15px;  }  
+	
+	 #bedrag { display:inline-block; border:0px; width:80px; font-size:0.9em; font-weight: 500; }
+	 #showBedrag { display: none; }
      
   .deelnemers { 
     display:flex; flex-direction:row; justify-content:flex-start; 
-    align-items:flex-start; margin-left:20px; margin-bottom:3px; 
-  }  
-   
-  .deelnemers input[type=text] { width: 50px; display:inline-block; }	  
+	align-items:flex-start; margin-left:20px; margin-bottom:3px; }  
+  .deelnemers input[type=text] { width:50px; display:inline-block; }	  
   .deelnemers label { display:inline-block; margin-left:10px; }	  
 	
-  #divConventie { display:block; text-align:left; margin-left:20px; margin-bottom:3px; }  
+  #divConventie  { display:block; text-align:left; margin-left:20px; margin-bottom:3px; }  
   #divConventie input[type=radio] { display:inline-block; width:12px; }	  
   #divConventie input[type=text] { display:inline-block; width:120px; }	  
+  #divConventie label { display:inline-block; margin-left:10px; white-space:nowrap; }	  
 		
   .txtActiviteiten, #randanimatie { display:flex; margin-left:20px; margin-bottom:2px; }
-	  
-  .txtGroep {
-    display:block; color:#0000ff; margin:30px 0px 10px 0; 
-    font-size: 1.2em; line-height: 1.2em; font-weight:500;
-  }
+  .txtGroep { display:block; color:#0000ff; margin:30px 0px 10px 0; font-size: 1.2em; font-weight:500;}
 
   #btnSubmit, #fakeBtnSubmit {
     text-align:center; font-size:22px; line-height: 28px;
-    padding: 10px; border-radius: 5px; width: 100%; margin-top: 10px;
-  }
+    padding: 10px; border-radius: 5px; width: 100%; margin-top: 10px; }
   #btnSubmit { background-color:#663ab7; color:#fff; border: none; display:none; }
   #fakeBtnSubmit { background-color:#f2f2f2; color:#d8d8d8; border: 2px #d8d8d8 solid; }
+  #txtFakeBtnSubmit { font-size:14px; color:#ff0000; margin-top: 5px; } 
 
   #logoDL { display:block; position: absolute; top:12px; right:20px; width: 150px; height:50px; }  
+	   
+  #containerBevestiging {
+	  display:grid; position: absolute; visibility: hidden; z-index:99;
+	  left:0px; top:0px; right:0px; bottom:0px;
+	  grid-template-columns: minmax( 480px, auto); grid-template-rows: auto 135px;
+	  justify-content: center; align-content: end;
+	  background-color: rgba( 135, 206, 250, 0.2 ) ; }
+	   
+  #bevestiging {
+	  background-color: #ffffff; border: 2px solid #333; border-radius: 7px; 
+      background-image: linear-gradient(to bottom, #7b68ee , #7b68ee );
+      background-size: 100% 42px; background-position: top left; background-repeat:no-repeat; }
 
+  #bevestigingTitel { padding: 11px 25px; font-size: 20px; color:#ffffff; }
+  #bevestigingMsg { padding: 24px 25px 12px 15px; text-align:left; font-size: 18px; }
+  #btnOK { float: right; font-size: 18px; padding: 3px 25px; margin: 10px; cursor: pointer; }                                                              
+ 
+  /* DESKTOP TABEL */
   .activiteiten { 
-    display:flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between;
-    align-items: flex-start; width:540px; margin-bottom:2px; margin-left:20px;
-  }   
-  .activiteiten div { display:inline-block; } 
-  .activiteiten div:nth-child(1) { width:105px;}
-  .activiteiten div:nth-child(2) { width:50px; }
-  .activiteiten div:nth-child(3) { width:105px; }
-  .activiteiten div:nth-child(4) { width:105px; }
-  .activiteiten div:nth-child(5) { width:105px; }
+	  display:flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between;
+	  width:540px; margin-bottom:2px; margin-left:20px;}   
+	.activiteiten div:nth-child(1) { width:105px;}
+	.activiteiten div:nth-child(2) { width:50px; }
+	.activiteiten div:nth-child(3) { width:105px; }
+	.activiteiten div:nth-child(4) { width:105px; }
+	.activiteiten div:nth-child(5) { width:105px; }
+    .activiteiten input, .activiteiten select { width: 100%; }
+     
+  option { color:#333; background-color: #efefff; } 
 
-  /* --- SPECIFIEKE GSM AANPASSINGEN --- */
+  /* --- GSM AANPASSINGEN --- */
   @media screen and (max-width: 600px) {
     #content { width: 100%; }
-    
-    /* Header perfect centreren en tekst iets kleiner om afkappen te voorkomen */
     #top { display: block; text-align: center; padding: 15px 5px; }
     #top div { width: 100% !important; padding: 2px 0 !important; margin: 0 auto !important; }
-    #top div:nth-child(1) { font-size: 26px; line-height: 30px; } /* Iets kleiner voor gsm */
-    #top div:nth-child(8) { font-size: 22px; line-height: 26px; }
+    #top div:nth-child(1) { font-size: 26px; line-height: 30px; }
     
-    #myForm { 
-      width: 95%; left: 0; margin: -24px auto 20px auto; 
-      padding: 15px 10px; 
-    }
-    
-    .grp { width: 100%; flex-direction: column; }
+    #myForm { width: 95%; left: 0; margin: -24px auto 20px auto; padding: 15px 10px; }
+    .grp { flex-direction: column; width: 100%; }
     .divLeft, .divcenter, .divright { margin: 0 0 10px 0; width: 100%; }
     .divLeft { margin-left: 0; }
     
-    /* Activiteiten velden één voor één onder elkaar */
+    /* Activiteiten per kind onder elkaar in grijze blokken */
     .activiteiten { 
       width: 100%; margin-left: 0; flex-direction: column; 
-      background-color: #f7f7f7; padding: 10px; border-radius: 5px; margin-bottom: 15px;
-      border: 1px solid #ddd;
+      background-color: #f7f7f7; padding: 10px; border-radius: 5px; margin-bottom: 15px; border: 1px solid #ddd;
     }
     .activiteiten div { width: 100% !important; margin-bottom: 10px; }
-    
-    /* Labels toevoegen voor gsm */
     .activiteiten div:nth-child(1):before { content: "Naam kind:"; font-size: 0.8em; color: #666; display: block; }
     .activiteiten div:nth-child(2):before { content: "Leeftijd:"; font-size: 0.8em; color: #666; display: block; }
-    .activiteiten div:nth-child(3):before { content: "1e Keuze activiteit:"; font-size: 0.8em; color: #666; display: block; }
-    .activiteiten div:nth-child(4):before { content: "2e Keuze activiteit:"; font-size: 0.8em; color: #666; display: block; }
-    .activiteiten div:nth-child(5):before { content: "Reserve keuze:"; font-size: 0.8em; color: #666; display: block; }
-
-    .activiteiten:first-child { display: none; } /* Verberg desktop titels */
-
+    .activiteiten div:nth-child(3):before { content: "1e keuze:"; font-size: 0.8em; color: #666; display: block; }
+    .activiteiten div:nth-child(4):before { content: "2e keuze:"; font-size: 0.8em; color: #666; display: block; }
+    .activiteiten div:nth-child(5):before { content: "Reserve:"; font-size: 0.8em; color: #666; display: block; }
+    .activiteiten:first-child { display: none; }
+    
     #logoDL { position: static; margin: 10px auto; display: block; }
-    #txtVerplicht { text-align: center; }
+    #containerBevestiging { grid-template-columns: 90%; }
   }
-
-  /* Bevestigingsvenster */
-  #containerBevestiging {
-    display:grid; position: fixed; visibility: hidden; z-index:99;
-    left:0px; top:0px; right:0px; bottom:0px;
-    justify-content: center; align-content: center;
-    background-color: rgba(0,0,0,0.6); 
-  }
-  #bevestiging { background-color: #ffffff; border: 2px solid #333; border-radius: 7px; max-width: 90%; overflow: hidden; }
-  #bevestigingTitel { padding: 15px; background-color: #7b68ee; color: #fff; font-weight: bold; }
-  #bevestigingMsg { padding: 20px; }
-  #btnOK { float: right; margin: 10px; padding: 5px 20px; cursor: pointer; }
  </style>
-</head>
+ </head>
 <body>
      
 <div id="content">
@@ -224,12 +215,19 @@
     </div>
             
    <div class="txtGroep">Programma</div>  
-   <div class="programma"><div>• 13.00 u:</div><div>verwelkoming, ontvangst</div></div>
-   <div class="programma"><div>• 13.15 u:</div><div>welkomstwoord voorzitter</div></div>
-   <div class="programma"><div>• 17.30 u:</div><div>einde van de Gezinsdag</div></div>
+   <div class="programma"><div>• &nbsp;13.00 u:</div><div>verwelkoming, ontvangst</div></div>
+   <div class="programma"><div>• &nbsp;13.15 u:</div><div>welkomstwoord voorzitter</div></div>
+   <div class="programma"><div>• &nbsp;13.20 u:</div><div>indeling groepen</div></div>
+   <div class="programma"><div>• &nbsp;13.30 u:</div><div>start disciplines voor kinderen o.l.v. diabeteseducatoren en RO Limburg</div></div>
+   <div class="programma"><div>• &nbsp;13.30 u:</div><div>start praatcafé voor de ouders o.l.v. de endocrinologen</div></div>
+   <div class="programma"><div>• &nbsp;13.30 u:</div><div>start quiz/wandeling</div></div>
+   <div class="programma"><div>• &nbsp;16.30 u:</div><div>evaluatie antwoorden quiz/wandeling en duiding</div></div>
+   <div class="programma"><div>• &nbsp;16.45 u:</div><div>groepsfoto en dansuitvoering door kinderen</div></div>
+   <div class="programma"><div>• &nbsp;17.15 u:</div><div>slotwoord</div></div>
+   <div class="programma"><div>• &nbsp;17.30 u:</div><div>einde van een fantastische Gezinsdag 2026</div></div>
 
-   <div class="txtGroep">Aantal deelnemers (*)</div>  
-   <div class="deelnemers">  
+	 <div class="txtGroep">Aantal deelnemers (*)</div>  
+    <div class="deelnemers">  
       <input type="text" id="aantalKinderen" value="1" name="strAantalKinderen">
       <label for="aantalKinderen">Aantal kinderen: gratis</label>
     </div>
@@ -238,100 +236,171 @@
       <label for="aantalOudersBegeleiders">Aantal ouders/begeleiders: € 10.00 p.p.</label>
     </div>
 		  
-    <div id="showBedrag"> 
-      <div class="txtGroep">Deelname prijs</div>  
-	  <div style="margin-left:20px; margin-bottom:25px;">
-	    <b>Te betalen: € </b><input type="text" id="bedrag" style="display:inline; width:80px; border:none; background:transparent;" readonly name="strBedrag">
+    <div class="txtGroep">Conventie</div>  
+    <div id="divConventie">
+      <input id="bree" type="radio" value="ZOL Maas en Kempen" name="strConventie" checked > <label for="bree">ZOL Maas en Kempen</label><br>
+      <input id="hassselt" type="radio" value="Hasselt" name="strConventie" > <label for="hassselt">Jessa Ziekenhuis Hasselt</label><br>
+      <input id="leuven" type="radio" value="Leuven" name="strConventie" > <label for="leuven">UZ Leuven</label><br>
+      <input id="andere" type="radio" value="andere" name="strConventie" > <label for="andere">andere</label>
+      <input type="text" id="andereconventie" name="strAndereConventie" >
+    </div>
+	
+	<div id="showBedrag"> 
+    <div class="txtGroep">Deelname prijs</div>  
+		<div style="width:90%; margin-left:20px; margin-bottom:25px;">
+	    <b>Te betalen:&nbsp;</b>€&nbsp;<input type="text" id="bedrag" readonly name="strBedrag"><br> 
+	    op rekeningnummer&nbsp;<b>BE45 0689 3473 7089</b><br>Diabetes Liga Limburg
 	  </div>
 	</div>
-
+  			  
 	<div class="txtGroep">Activiteiten per kind</div>             
+    <div class="txtActiviteiten"><div>• &nbsp;</div><div>Kies 2 activiteiten en 1 reserve per kind.</div></div>
+	
     <div id="containerActiviteiten">
        <div class="activiteiten">
          <div>Naam</div><div>leeftijd</div><div>1e keuze</div><div>2e keuze</div><div>reserve</div>
        </div>
-	   <div class="activiteiten" id="idd10">
-         <div><input id="idd11" type="text"></div><div><input id="idd12" type="text"></div>
-         <div><select id="idd13"></select></div><div><select id="idd14"></select></div><div><select id="idd15"></select></div>
-       </div>
-	   <div class="activiteiten" id="idd20">
-         <div><input id="idd21" type="text"></div><div><input id="idd22" type="text"></div>
-         <div><select id="idd23"></select></div><div><select id="idd24"></select></div><div><select id="idd25"></select></div>
-       </div>
-	   <div class="activiteiten" id="idd30">
-         <div><input id="idd31" type="text"></div><div><input id="idd32" type="text"></div>
-         <div><select id="idd33"></select></div><div><select id="idd34"></select></div><div><select id="idd35"></select></div>
-       </div>
+       <!-- ALLE 9 RIJEN UIT HET ORIGINEEL -->
+	   <div class="activiteiten" id="idd10"><div><input id="idd11" type="text"></div><div><input id="idd12" type="text"></div><div><select id="idd13"></select></div><div><select id="idd14"></select></div><div><select id="idd15"></select></div></div>
+	   <div class="activiteiten" id="idd20"><div><input id="idd21" type="text"></div><div><input id="idd22" type="text"></div><div><select id="idd23"></select></div><div><select id="idd24"></select></div><div><select id="idd25"></select></div></div>
+	   <div class="activiteiten" id="idd30"><div><input id="idd31" type="text"></div><div><input id="idd32" type="text"></div><div><select id="idd33"></select></div><div><select id="idd34"></select></div><div><select id="idd35"></select></div></div>
+	   <div class="activiteiten" id="idd40"><div><input id="idd41" type="text"></div><div><input id="idd42" type="text"></div><div><select id="idd43"></select></div><div><select id="idd44"></select></div><div><select id="idd45"></select></div></div>
+	   <div class="activiteiten" id="idd50"><div><input id="idd51" type="text"></div><div><input id="idd52" type="text"></div><div><select id="idd53"></select></div><div><select id="idd54"></select></div><div><select id="idd55"></select></div></div>
+	   <div class="activiteiten" id="idd60"><div><input id="idd61" type="text"></div><div><input id="idd62" type="text"></div><div><select id="idd63"></select></div><div><select id="idd64"></select></div><div><select id="idd65"></select></div></div>
+	   <div class="activiteiten" id="idd70"><div><input id="idd71" type="text"></div><div><input id="idd72" type="text"></div><div><select id="idd73"></select></div><div><select id="idd74"></select></div><div><select id="idd75"></select></div></div>
+	   <div class="activiteiten" id="idd80"><div><input id="idd81" type="text"></div><div><input id="idd82" type="text"></div><div><select id="idd83"></select></div><div><select id="idd84"></select></div><div><select id="idd85"></select></div></div>
+	   <div class="activiteiten" id="idd90"><div><input id="idd91" type="text"></div><div><input id="idd92" type="text"></div><div><select id="idd93"></select></div><div><select id="idd94"></select></div><div><select id="idd95"></select></div></div>
     </div>		    
 		  
-   <div class="txtGroep">Opmerkingen</div>             
-   <div style="width:95%; margin: 0 auto 25px auto;"> 
-	  <textarea id="opmerkingen" rows="5" name="strOpmerkingen" style="width:100%;"></textarea>  
-   </div> 
-   
-   <input id="btnSubmit" type="submit" value="Inschrijven" name="strMyFormSubmit210326" >
-   <input id="fakeBtnSubmit" type="button" value="Inschrijven">
-     
-  <img id="logoDL" src="https://www.diabetesligalimburg.be/image/DiabetesLigaLimburg.png" alt="Logo" >        
- 
-  <div id="txtVerplicht">(*) velden zijn verplicht</div> 
-	
-  <div id="containerBevestiging">
-    <div id="bevestiging">
-	    <div id="bevestigingTitel">Inschrijving 'Gezinsdag 2026'</div>
-	    <div id="bevestigingMsg">Inschrijving wordt verwerkt...</div>
-	    <div id="btnOK">Sluiten</div>  
+    <div class="txtGroep">Activiteiten ouders/begeleiders</div>  
+    <div class="deelnemers" style="display:none">  
+      <input type="text" id="aantalPraatcafe" name="strAantalPraatcafe"><label for="aantalPraatcafe">Praatcafé</label>
     </div>
+    <div class="deelnemers">  
+      <input type="text" id="aantalWandeling" name="strAantalWandeling"><label for="aantalWandeling">Quiz/wandeling</label>
+    </div>
+    
+    <div class="txtGroep">Diverse gratis randanimatie</div>             
+    <div id="randanimatie"><div>Geschikt voor alle leeftijden.</div></div>
+         
+    <div class="txtGroep">Opmerkingen</div>             
+    <div style="width:90%;margin-left:20px; margin-bottom:25px;"> 
+	    <textarea id="opmerkingen" rows="6" name="strOpmerkingen" style="width:100%; resize: none;"></textarea>  
+    </div> 
+   
+    <input id="btnSubmit" type="submit" value="Inschrijven" name="strMyFormSubmit210326" >
+    <input id="fakeBtnSubmit" type="button" value="Inschrijven">
+    <div id="txtFakeBtnSubmit">Gelieve alle verplichte velden in te vullen</div>  
+     
+    <img id="logoDL" src="https://www.diabetesligalimburg.be/image/DiabetesLigaLimburg.png" alt="Logo" >        
+    <div id="txtVerplicht">(*) velden zijn verplicht</div> 
+	
+    <div id="containerBevestiging">
+      <div id="bevestiging">
+	      <div id="bevestigingTitel">Inschrijving 'Gezinsdag 2026'</div>
+	      <div id="bevestigingMsg">Inschrijving</div>
+	      <div id="btnOK">Ok</div>  
+      </div>
 	</div>
   
-  <div style="display:none;">
-    <input id="filenaam" type="text" value="lijstgezinsdag2026" name="strFileNaam" >
-	<input id="keuze" type="text" name="strKeuze">
-	<input id="msgKeuze" type="text" name="strMsgKeuze">
-  </div>
+    <div style="display:none;">
+      <input id="filenaam" type="text" value="lijstgezinsdag2026" name="strFileNaam" >
+	  <input id="keuze" type="text" name="strKeuze">
+	  <input id="msgKeuze" type="text" name="strMsgKeuze">
+	</div>
   </form>
 </div>  
 
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  // Validatie en interactie logica
-  $('input').on('keyup change', function(){
-    if ($('#naam').val() && $('#voornaam').val() && $('#email').val()) {
-      $('#btnSubmit').show(); $('#fakeBtnSubmit').hide();
-    } else {
-      $('#btnSubmit').hide(); $('#fakeBtnSubmit').show();
-    }
+  var charAantal = '0123456789'; 
+  var charTel = '0123456789 (),.:/+' ;
+
+  $('#postcode, #aantalKinderen, #aantalOudersBegeleiders, #aantalPraatcafe, #aantalWandeling').keypress(function(e){
+    return charAantal.indexOf(String.fromCharCode(e.keyCode)) >= 0;
+  });
+  
+  $('#telefoon').keypress(function(e){
+    return charTel.indexOf(String.fromCharCode(e.keyCode)) >= 0;
   });
 
-  $('#aantalOudersBegeleiders').on('keyup change', function(){
-    var n = parseInt($(this).val() || 0);
-    if(n > 0){ $('#showBedrag').show(); $('#bedrag').val(n*10 + ',00'); }
+  $('input').keyup(function(){
+    if ($.fn.checkSubmit()) { $('#btnSubmit').show(); $('#fakeBtnSubmit').hide(); } 
+    else { $('#btnSubmit').hide(); $('#fakeBtnSubmit').show(); }
+  });
+
+  $.fn.checkSubmit = function(){
+	  return ($('#naam').val() && $('#voornaam').val() && $('#adres').val() && $('#postcode').val() && $('#plaats').val() && $('#email').val() && $('#telefoon').val());
+  };
+
+  $('#aantalOudersBegeleiders').keyup(function(){
+	  var n = parseInt($(this).val() || 0);
+	  if (n > 0) { $('#showBedrag').show(); $('#bedrag').val(n*10 + ',00'); } 
     else { $('#showBedrag').hide(); }
   });
 
-  $('#aantalKinderen').on('keyup change', function(){
-    var n = parseInt($(this).val() || 0);
-    if(n > 3) n = 3; // In dit voorbeeld beperkt tot 3 voor de demo
-    for(var i=1; i<=3; i++){
-      if(i <= n) $('#idd'+i*10).css('display','flex');
-      else $('#idd'+i*10).hide();
-    }
+  $('#aantalKinderen').keyup(function(){
+	  var n = parseInt($(this).val() || 0);
+		if (n > 9) n = 9;
+		$.fn.setRows(n);
+	});
+
+  $.fn.setRows = function(n){
+	  for(var i=1; i<=9; i++){
+		  if(i <= n) $('#idd'+i*10).css('display','flex');
+		  else $('#idd'+i*10).hide();
+	  }
+  };
+
+  $.fn.setArrayKeuze = function(){
+	  var arrayKeuze = '';
+		var n = parseInt($('#aantalKinderen').val() || 0);
+		for(var i=1; i<=n; i++){
+		  arrayKeuze += $('#idd'+i+'1').val() + ';' + $('#idd'+i+'2').val() + ';' + $('#idd'+i+'3 option:selected').val() + ';' + $('#idd'+i+'4 option:selected').val() + ';' + $('#idd'+i+'5 option:selected').val() + '|';
+	  }
+	  $('#keuze').val(arrayKeuze);
+  };
+
+  $.fn.setMsgKeuze = function(){
+	  var n = parseInt($('#aantalKinderen').val() || 0);
+		var myKeuze = '<table border="0" style="font-size:15px;">';
+		for(var i=1; i<=n; i++){
+		  myKeuze += '<tr><td>' + $('#idd'+i+'1').val() + ': </td><td>' + $('#idd'+i+'3 option:selected').val() + '</td><td>' + $('#idd'+i+'4 option:selected').val() + '</td><td>(' + $('#idd'+i+'5 option:selected').val() + ')</td></tr>';
+    }		     
+		myKeuze += '</table>';
+	  $('#msgKeuze').val(myKeuze);
+  };
+
+  $('select').on('click change', function(){
+    var Id = $(this).attr('id');
+	  $('#'+Id+' option').removeAttr('disabled');
+	  var base = Id.slice(0,-1);
+	  var v1 = $('#'+base+'3').val(), v2 = $('#'+base+'4').val(), v3 = $('#'+base+'5').val();
+	  if(v1 && v1!=" ") $('#'+Id+' option[value="'+v1+'"]').attr('disabled','disabled');
+	  if(v2 && v2!=" ") $('#'+Id+' option[value="'+v2+'"]').attr('disabled','disabled');
+	  if(v3 && v3!=" ") $('#'+Id+' option[value="'+v3+'"]').attr('disabled','disabled');
+    $(this).find('option:selected').removeAttr('disabled');
   });
 
   var opts = ["---", "shetland knuffeltocht", "boogschieten", "muurklimmen", "dansinitiatie", "tuben", "mountainbike pumptrack"];
-  $.each(opts, function(i, v){
-    $('select').append($('<option>', {value: v, text: v}));
-  });
+  $.each(opts, function(i, v){ $('select').append($('<option>', {value: v=="---"?" ":v, text: v})); });
 
   $("#myForm").submit(function(e){
     e.preventDefault();
-    $('#containerBevestiging').css('visibility','visible');
-    // Hier zou de echte AJAX post komen naar uw PHP bestand
-    $('#bevestigingMsg').html("Bedankt voor uw inschrijving!");
+    $.fn.setArrayKeuze();
+	$.fn.setMsgKeuze();
+    var form = $(this);
+    $.ajax({
+      type: "POST", url: form.attr('action'), data: form.serialize(),
+      success: function(response){ $('#bevestigingMsg').html(response); },
+      error: function(){ $('#bevestigingMsg').html("Fout bij verzenden."); },
+      complete: function(){ $('#containerBevestiging').css('visibility','visible'); }
+    });
   });
 
   $('#btnOK').click(function(){ location.reload(); });
+  $.fn.setRows(1);
 });
 </script>
 </body>
