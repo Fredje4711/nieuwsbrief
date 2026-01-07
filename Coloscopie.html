@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Schema coloscopie</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: rgba(18, 24, 36, .94);
+      --text: #eef2f7;
+      --muted: #b8c0cc;
+      --accent: #6aa6ff;
+      --accent2: #7ee0c2;
+      --warn: #ffcf6a;
+      --border: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #070a0f 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 14, 20, .78);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 10px 8px;
+    }
+    .nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+    .nav button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .nav button.active {
+      border-color: rgba(106,166,255,.7);
+      background: rgba(106,166,255,.12);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 10px 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .card + .card { margin-top: 12px; }
+    .cardhead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .h2 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    h3 {
+      margin: 12px 0 6px;
+      font-size: 14px;
+      color: var(--accent2);
+      letter-spacing: .2px;
+    }
+    p { margin: 6px 0; }
+    ul, ol { margin: 6px 0 10px 18px; }
+    li { margin: 4px 0; }
+    hr {
+      border: 0;
+      border-top: 1px dashed var(--border);
+      margin: 12px 0;
+    }
+    .time {
+      margin: 10px 0 6px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .clock {
+      font-weight: 800;
+      color: var(--accent);
+      min-width: 54px;
+    }
+    .callout {
+      border-left: 4px solid var(--warn);
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255, 207, 106, .08);
+      margin: 10px 0 8px;
+    }
+    /* Show one section at a time */
+    .hidden { display: none; }
+    @media print {
+      .topbar { position: static; }
+      .nav { display: none; }
+      main { max-width: none; }
+      .hidden { display: block !important; }
+      body { background: #fff; color: #000; }
+      .card { box-shadow: none; background: #fff; border: 1px solid #ddd; }
+      .badge { color: #333; }
+      .time { background: #f7f7f7; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar" role="navigation" aria-label="Dagen">
+    <div class="nav">
+      <button type="button" data-target="vrijdag">Vrijdag</button><button type="button" data-target="zaterdag">Zaterdag</button><button type="button" data-target="zondag">Zondag</button><button type="button" data-target="maandag">Maandag</button><button type="button" data-target="controle">Controle</button>
+    </div>
+  </div>
+
+  <main id="content">
+    <section class="card" data-section="vrijdag">
+  <div class="cardhead">
+    <div class="h2">VRIJDAG 9 JANUARI 2026</div>
+    <div class="badge">Dag</div>
+  </div>
+  
+  <div class="content">
+    <p>(3 dagen vóór het onderzoek – start restenarm dieet)</p>
+<h3>Ochtend (±08:00):</h3>
+<ul>
+<li>2 ovengebakken bouletten (gemengd gehakt)</li>
+<li>2 hardgekookte eieren</li>
+<li>1 tas koffie</li>
+<li>Water</li>
+</ul>
+<h3>Vrijdagvoormiddag (10:00 – 12:00, koffiemoment met dochter):</h3>
+<ul>
+<li>2 koffies</li>
+<li>Water</li>
+<li>Maaltijd rond 11:00:</li>
+<li>Croque monsieur met wit brood, ham en kaas</li>
+<li>Gebakken eieren toegestaan</li>
+<li>GEEN sla of groenten toevoegen</li>
+</ul>
+<h3>Namiddag / avond (±16:00):</h3>
+<ul>
+<li>Steak (±300 g)</li>
+<li>Aardappelpuree OF witte rijst OF witte pasta</li>
+<li>Saus zonder groenten</li>
+<li>Water</li>
+</ul>
+<h3>Avond (±18:00):</h3>
+<ul>
+<li>Pudding, yoghurt zonder fruit of platte kaas</li>
+</ul>
+<h3>Verboden vanaf deze dag:</h3>
+<ul>
+<li>Groenten (ook sla)</li>
+<li>Champignons</li>
+<li>Fruit (bv. blauwe bessen)</li>
+<li>Volkoren producten</li>
+</ul>
+<hr/>
+  </div>
+</section><section class="card" data-section="zaterdag">
+  <div class="cardhead">
+    <div class="h2">ZATERDAG 10 JANUARI 2026</div>
+    <div class="badge">Dag</div>
+  </div>
+  
+  <div class="content">
+    <p>(2 dagen vóór het onderzoek – restenarm dieet verderzetten)</p>
+<p>Zelfde voedingsschema als vrijdag, zonder koffiehuisbezoek.</p>
+<hr/>
+  </div>
+</section><section class="card" data-section="zondag">
+  <div class="cardhead">
+    <div class="h2">ZONDAG 11 JANUARI 2026</div>
+    <div class="badge">Dag</div>
+  </div>
+  
+  <div class="content">
+    <p>(1 dag vóór het onderzoek)</p>
+<p>Tot 13:00 – Laatste restenarme maaltijd</p>
+<h3>Voorbeeld (rond 12:00):</h3>
+<ul>
+<li>Wit brood met kaas of kip</li>
+<li>Yoghurt zonder fruit</li>
+<li>Water</li>
+</ul>
+<h3>Vanaf 13:00:</h3>
+<ul>
+<li>GEEN vaste voeding meer</li>
+<li>Enkel heldere vloeistoffen:</li>
+<li>Water</li>
+<li>Koffie zonder melk</li>
+<li>Thee</li>
+<li>Aquarius</li>
+</ul>
+<div class='time'><div class='clock'>15:00</div><div class='ttext'>15:00 – Licht tussendoortje:</div></div>
+<ul>
+<li>Pudding of yoghurt zonder fruit</li>
+</ul>
+<div class='time'><div class='clock'>18:00</div><div class='ttext'>18:00 – Eerste dosis PLENVU® (mangosmaak)</div></div>
+<h3>Stap voor stap:</h3>
+<ol>
+<li>Los dosis 1 op in 500 ml koud water</li>
+<li>Roer tot volledig opgelost (max. 8 minuten)</li>
+<li>Drink de oplossing afwisselend met 500 ml water</li>
+<li>Totale drinktijd: minimaal 1 uur</li>
+<li>Rustig tempo: ongeveer 1 glas om de 10 minuten</li>
+<li>Drink daarna nog extra 500 ml water</li>
+</ol>
+<h3>Na 19:00:</h3>
+<ul>
+<li>Blijf heldere vloeistoffen drinken</li>
+</ul>
+<hr/>
+  </div>
+</section><section class="card" data-section="maandag">
+  <div class="cardhead">
+    <div class="h2">MAANDAG 12 JANUARI 2026</div>
+    <div class="badge">Dag</div>
+  </div>
+  
+  <div class="content">
+    <p>(Dag van het onderzoek)</p>
+<p>Geen ontbijt.</p>
+<div class='time'><div class='clock'>06:00</div><div class='ttext'>06:00 – Tweede dosis PLENVU® (fruitdranksmaak – zakjes A + B)</div></div>
+<h3>Stap voor stap:</h3>
+<ol>
+<li>Los zakjes A + B op in 500 ml koud water</li>
+<li>Roer tot volledig opgelost</li>
+<li>Drink afwisselend met 500 ml water</li>
+<li>Totale drinktijd: minimaal 1 uur</li>
+<li>Rustig tempo: ongeveer 1 glas om de 10 minuten</li>
+<li>Drink daarna nog extra 500 ml water</li>
+</ol>
+<div class='time'><div class='clock'>08:00</div><div class='ttext'>08:00 – NUCHTER</div></div>
+<p>Vanaf dit moment niet meer eten of drinken.</p>
+<div class='time'><div class='clock'>08:30</div><div class='ttext'>08:30 – COLOSCOPIE (ZOL Genk)</div></div>
+<p>================================================</p>
+  </div>
+</section><section class="card" data-section="controle">
+  <div class="cardhead">
+    <div class="h2">Belangrijke controle</div>
+    <div class="badge">Check</div>
+  </div>
+  <div class='callout'><strong>Belangrijk:</strong> De voorbereiding is correct wanneer de stoelgang vloeibaar, helder en lichtgekleurd is (zoals urine), zonder vlokken.</div>
+  <div class="content">
+    <p>================================================</p>
+<h3>De voorbereiding is correct wanneer de stoelgang:</h3>
+<ul>
+<li>Vloeibaar is</li>
+<li>Helder</li>
+<li>Lichtgekleurd zoals urine</li>
+<li>Zonder vlokken</li>
+</ul>
+  </div>
+</section>
+  </main>
+
+  <script>
+    (function() {
+      const buttons = Array.from(document.querySelectorAll('.nav button'));
+      const sections = Array.from(document.querySelectorAll('section[data-section]'));
+
+      function show(id) {
+        sections.forEach(s => s.classList.toggle('hidden', s.getAttribute('data-section') !== id));
+        buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-target') === id));
+        // keep URL hash in sync (handig op gsm)
+        if (location.hash !== '#' + id) {
+          history.replaceState(null, '', '#' + id);
+        }
+        // ensure content starts right under sticky header
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      buttons.forEach(b => b.addEventListener('click', () => show(b.getAttribute('data-target'))));
+
+      const initial = (location.hash || '#vrijdag').replace('#','');
+      const valid = new Set(sections.map(s => s.getAttribute('data-section')));
+      show(valid.has(initial) ? initial : 'vrijdag');
+    })();
+  </script>
+</body>
+</html>
