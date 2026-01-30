@@ -32,9 +32,18 @@
      background-color:#dde7e6; color:#333; }
     
     #top { 
-	    display: flex; flex-wrap: wrap; justify-content: space-between;
+        /* Nieuwe regels voor het vastzetten: */
+        position: -webkit-sticky; /* Voor Safari ondersteuning */
+        position: sticky;
+        top: 0;                   /* Plakt tegen de bovenkant */
+        z-index: 999;             /* Zorgt dat het bovenop het formulier blijft liggen */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Geeft een schaduw tijdens het scrollen */
+
+        /* Je bestaande opmaak: */
+        display: flex; flex-wrap: wrap; justify-content: space-between;
         width:100%; height:auto; background-color: #663ab7; color:#ffffff;
-	    font-size:20px; line-height:21px; }
+        font-size:20px; line-height:21px; 
+    }
 	
 	#top div:nth-child(1) { width:100%; padding: 5px 10px 3px 10px; font-size:32px; line-height:34px; }
     #top div:nth-child(2) { width:100%; height:11px; }
@@ -96,7 +105,15 @@
   #fakeBtnSubmit { background-color:#f2f2f2; color:#d8d8d8; border: 2px #d8d8d8 solid; }
   #txtFakeBtnSubmit { font-size:14px; color:#ff0000; margin-top: 5px; } 
 
-  #logoDL { display:block; position: absolute; top:12px; right:20px; width: 150px; height:50px; }  
+  #logoDL { 
+      display:block; 
+      position: absolute; 
+      top:12px; 
+      right:20px; 
+      width: 150px; 
+      height:50px; 
+      z-index: 10; /* Zorgt dat het logo onder de header door gaat bij scrollen */
+  } 
 	   
   #containerBevestiging {
 	  display:grid; position: absolute; visibility: hidden; z-index:99;
@@ -130,9 +147,35 @@
   /* --- GSM AANPASSINGEN --- */
   @media screen and (max-width: 600px) {
     #content { width: 100%; }
-    #top { display: block; text-align: center; padding: 15px 5px; }
-    #top div { width: 100% !important; padding: 2px 0 !important; margin: 0 auto !important; }
-    #top div:nth-child(1) { font-size: 26px; line-height: 30px; }
+    
+    /* Header compacter maken */
+    #top { 
+      display: block; 
+      text-align: center; 
+      padding: 8px 5px 5px 5px !important; /* Minder ruimte boven en onder */
+    }
+    
+    #top div { 
+      width: 100% !important; 
+      padding: 0 !important; 
+      margin: 0 auto !important; 
+      font-size: 15px !important; /* Kleinere letters voor datum/adres */
+      line-height: 18px !important; 
+    }
+
+    /* De titel iets kleiner maar nog steeds duidelijk */
+    #top div:nth-child(1) { 
+      font-size: 19px !important; 
+      line-height: 22px !important; 
+      margin-bottom: 4px !important;
+    }
+
+    /* Verwijder de lege witruimte-divs (de &nbsp; regels) enkel op mobiel */
+    #top div:nth-child(2), 
+    #top div:nth-child(5), 
+    #top div:nth-child(8) { 
+      display: none !important; 
+    }
     
     #myForm { width: 95%; left: 0; margin: -24px auto 20px auto; padding: 15px 10px; }
     .grp { flex-direction: column; width: 100%; }
@@ -173,7 +216,7 @@
 	 
   <form id="myForm" action="php4gezinsdag2026.php" accept-charset="utf-8" >
 
-    <div class="txtGroep" style="margin-top:40px;" >Contactpersoon (*)</div>           
+    <div class="txtGroep" style="margin-top:60px;" >Contactpersoon (*)</div>           
     <div class="grp">  
       <div class="divLeft">
         <label for="naam">Naam</label>
