@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ozempic (GLP-1) terugbetaling: nieuwe regels vanaf 1 februari 2026 (België)</title>
+  <meta name="description" content="Duidelijke uitleg voor patiënten over de gewijzigde terugbetalingsregels voor Ozempic en andere GLP-1-analogen in België vanaf 1 februari 2026, met officiële bronnen en disclaimer." />
+  <style>
+    :root{
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --accent:#0b5fff;
+      --accent2:#0a3ea8;
+      --warn-bg:#fff7ed;
+      --warn-border:#fdba74;
+      --ok-bg:#f0fdf4;
+      --ok-border:#86efac;
+      --shadow: 0 6px 18px rgba(17,24,39,.08);
+      --radius: 16px;
+    }
+
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+      font-size:18px; /* ouder publiek: iets groter */
+    }
+
+    a{ color:var(--accent2); }
+    a:focus{ outline: 3px solid rgba(11,95,255,.35); outline-offset: 2px; border-radius: 6px; }
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 14px 48px;
+    }
+
+    header{
+      background: linear-gradient(135deg, #0b5fff 0%, #08307a 100%);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.25);
+    }
+    .hero{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 14px 18px;
+    }
+    .hero h1{
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3.3vw, 40px);
+      line-height: 1.15;
+      letter-spacing: .2px;
+    }
+    .hero p{
+      margin: 0;
+      font-size: 1.05em;
+      opacity: .95;
+    }
+    .badge-row{
+      margin-top: 14px;
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.25);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95em;
+    }
+    .badge small{
+      font-weight: 600;
+      opacity: .9;
+    }
+
+    nav{
+      background:#ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 10px 14px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items:center;
+    }
+    .nav-inner a{
+      text-decoration:none;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      color: var(--text);
+      background: transparent;
+      font-weight: 600;
+    }
+    .nav-inner a:hover{
+      border-color: var(--border);
+      background: #f9fafb;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1.25fr .75fr; gap: 16px; }
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 16px;
+    }
+    @media (min-width: 860px){
+      .card{ padding: 20px 20px; }
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 1.35em;
+      line-height: 1.25;
+    }
+    h3{
+      margin: 18px 0 8px;
+      font-size: 1.12em;
+      line-height: 1.25;
+    }
+    .muted{ color: var(--muted); }
+
+    .callout{
+      border-radius: 14px;
+      padding: 14px 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      margin: 12px 0;
+    }
+    .callout.warn{
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+    }
+    .callout.ok{
+      background: var(--ok-bg);
+      border-color: var(--ok-border);
+    }
+    .callout strong{ display:block; margin-bottom: 6px; }
+
+    ul{ margin: 8px 0 0 22px; }
+    li{ margin: 6px 0; }
+
+    .steps{
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+      margin: 12px 0 0;
+    }
+    .steps li{
+      counter-increment: step;
+      margin: 10px 0;
+      padding: 12px 12px 12px 52px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      position: relative;
+    }
+    .steps li::before{
+      content: counter(step);
+      position:absolute;
+      left: 12px;
+      top: 12px;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #eaf0ff;
+      border: 1px solid #c7d2fe;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      color: #1f3fb7;
+    }
+
+    .faq details{
+      border:1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      padding: 12px 12px;
+      margin: 10px 0;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 800;
+      padding: 4px 2px;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq p{ margin: 10px 0 0; }
+
+    .sources a{ word-break: break-word; }
+    .foot{
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+    }
+    .small{ font-size: .95em; }
+    .print{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius: 12px;
+      padding: 10px 12px;
+      text-decoration:none;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .print:hover{ background:#f9fafb; }
+    @media print{
+      header, nav, .print{ display:none !important; }
+      body{ background:#fff; }
+      .card{ box-shadow:none; }
+      a{ color:#000; text-decoration: underline; }
+    }
+	#backToTop{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #0b5fff;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  display: none; /* pas zichtbaar na scroll */
+  z-index: 9999;
+}
+
+#backToTop:hover{
+  background: #08307a;
+}
+
+#backToTop:focus{
+  outline: 3px solid rgba(11,95,255,.5);
+  outline-offset: 2px;
+}
+
+/* Iets groter en comfortabeler op gsm */
+@media (max-width: 768px){
+  #backToTop{
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <h1>Nieuwe regels terugbetaling Ozempic (GLP-1) vanaf 1 februari 2026</h1>
+      <p>Voor patiënten in België – wat er verandert, wat u moet doen, en waar u de officiële informatie vindt.</p>
+      <div class="badge-row" aria-label="Belangrijkste punten">
+        <div class="badge">📅 Ingangsdatum: <small>01/02/2026</small></div>
+        <div class="badge">✅ Nieuw: <small>machtiging ziekenfonds verplicht</small></div>
+        <div class="badge">💊 Geldt voor: <small>GLP-1-analogen (o.a. Ozempic)</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner" aria-label="Snelle navigatie">
+      <a href="#wat-verandert">Wat verandert?</a>
+      <a href="#voor-wie">Voor wie?</a>
+      <a href="#welke-middelen">Welke middelen?</a>
+      <a href="#wat-moet-u-doen">Wat moet u doen?</a>
+      <a href="#faq">Veelgestelde vragen</a>
+      <a href="#bronnen">Officiële bronnen</a>
+      <a href="#disclaimer">Disclaimer</a>
+      <a class="print" href="#" onclick="window.print(); return false;">🖨️ Afdrukken</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+      <!-- Linkerkolom -->
+      <section class="card" id="wat-verandert">
+        <h2>Wat verandert er vanaf 1 februari 2026?</h2>
+
+        <div class="callout warn">
+          <strong>Belangrijk</strong>
+          <div>
+            Vanaf <strong>1 februari 2026</strong> is een doktersvoorschrift alleen <strong>niet meer voldoende</strong> om een GLP-1-analoog (zoals Ozempic) terugbetaald te krijgen.
+            U hebt ook een <strong>voorafgaande machtiging</strong> nodig van de <strong>adviserend arts</strong> van uw ziekenfonds (mutualiteit).
+          </div>
+        </div>
+		
+		<p class="muted">
+  Personen die vóór 1 februari 2026 reeds een geldige machtiging hadden,
+  behouden deze doorgaans tot het einde van de voorziene looptijd.
+</p>
+
+
+        <p class="muted">
+          Dit geldt <strong>zelfs</strong> als op het voorschrift “diabetes zorgtraject” staat én zelfs als u effectief in een zorgtraject zit.
+          De apotheker zal de aanwezigheid van de machtiging elektronisch controleren (MyCareNet / Hoofdstuk IV).
+        </p>
+
+        <h3>Hoe was het vóór 1 februari 2026?</h3>
+        <ul>
+          <li>Tot en met <strong>31 januari 2026</strong> bestond er een soepelere regeling (o.a. via “zorgtraject diabetes” of via machtiging). </li>
+          <li>Er was een <strong>overgangsperiode</strong> voorzien om patiënten en artsen tijd te geven om de machtiging in orde te brengen.</li>
+        </ul>
+
+        <div class="callout ok">
+          <strong>Wat is de kern van de nieuwe regel?</strong>
+          <div><strong>Voorschrift + machtiging ziekenfonds</strong> is vanaf 01/02/2026 de standaard voor terugbetaling van GLP-1-analogen.</div>
+        </div>
+
+        <h3>Waarom voert men deze wijziging in?</h3>
+        <p>
+          Volgens de officiële toelichting wil men misbruik en oneigenlijk gebruik van terugbetaling (bijvoorbeeld buiten de diabetes-indicatie) beperken,
+          en de terugbetaling beter “consolideren” via voorafgaande controle door de mutualiteit.
+        </p>
+      </section>
+
+      <!-- Rechterkolom -->
+      <aside class="card" id="voor-wie">
+        <h2>Voor wie is dit relevant?</h2>
+        <p>
+          Voor iedereen die een <strong>GLP-1-analoog</strong> gebruikt (of wil starten) met <strong>terugbetaling</strong> via het ziekenfonds.
+        </p>
+
+        <div class="callout warn">
+          <strong>Als u géén machtiging hebt</strong>
+          <div>Dan kan de apotheek de terugbetaling mogelijk niet toepassen vanaf 01/02/2026. U betaalt dan (tijdelijk) meer zelf.</div>
+        </div>
+
+        <h3>Wie regelt de machtiging?</h3>
+        <ul>
+          <li>Uw <strong>arts</strong> (huisarts of specialist) vraagt de machtiging aan volgens de terugbetalingsvoorwaarden.</li>
+          <li>De <strong>mutualiteit</strong> (adviserend arts) geeft de machtiging (of niet).</li>
+          <li>De <strong>apotheker</strong> controleert elektronisch of de machtiging aanwezig is.</li>
+        </ul>
+
+        <p class="muted small">
+          Let op: de medische voorwaarden (bijv. criteria voor terugbetaling) worden bepaald door de officiële regels.
+          Deze pagina legt vooral de administratieve wijziging uit (machtiging verplicht vanaf 01/02/2026).
+        </p>
+      </aside>
+    </div>
+
+    <section class="card" id="welke-middelen" style="margin-top:14px;">
+      <h2>Welke geneesmiddelen vallen hieronder?</h2>
+      <p>
+        De wijziging gaat over antidiabetica uit de klasse <strong>GLP-1-analogen</strong>.
+        In de communicatie worden o.a. deze merknamen genoemd:
+      </p>
+      <ul>
+        <li><strong>Ozempic®</strong></li>
+        <li><strong>Rybelsus®</strong></li>
+        <li><strong>Trulicity®</strong></li>
+        <li><strong>Victoza®</strong></li>
+        <li><strong>Xultophy®</strong></li>
+        <li><strong>Mounjaro®</strong> (wordt in de praktijk ook in dezelfde communicatie meegenomen)</li>
+      </ul>
+      <p class="muted small">
+        Dit is een patiëntenpagina. Uw arts of apotheker kan bevestigen welk middel u precies gebruikt en welke terugbetalingsregels daarvoor gelden.
+      </p>
+    </section>
+
+    <section class="card" id="wat-moet-u-doen" style="margin-top:14px;">
+      <h2>Wat moet u concreet doen? (stappenplan)</h2>
+      <p>
+        Als u Ozempic of een ander GLP-1-middel gebruikt met terugbetaling, is dit het eenvoudigste plan.
+      </p>
+
+      <ol class="steps">
+        <li>
+          <strong>Controleer of u een machtiging hebt</strong><br/>
+          Vraag aan uw apotheker of arts of er een geldige machtiging (“Hoofdstuk IV”) geregistreerd staat.
+        </li>
+        <li>
+          <strong>Zo niet: maak een afspraak met uw arts</strong><br/>
+          Uw arts kan de aanvraag voor machtiging in orde brengen (huisarts of specialist).
+        </li>
+        <li>
+          <strong>Volg de instructies van uw mutualiteit</strong><br/>
+          Soms gebeurt alles elektronisch; soms vraagt de mutualiteit bijkomende stappen. Volg hun communicatie.
+        </li>
+        <li>
+          <strong>Ga met uw voorschrift naar de apotheek</strong><br/>
+          De apotheker controleert via MyCareNet of de machtiging aanwezig is en kan dan de derdebetalersregeling toepassen.
+        </li>
+      </ol>
+
+      <div class="callout warn">
+        <strong>Praktische tip</strong>
+        <div>
+          Wacht niet tot het laatste moment: als de machtiging ontbreekt, kan de terugbetaling vanaf 01/02/2026 blokkeren.
+          Neem bij twijfel contact op met uw arts, apotheker of mutualiteit.
+        </div>
+      </div>
+    </section>
+
+    <section class="card faq" id="faq" style="margin-top:14px;">
+      <h2>Veelgestelde vragen</h2>
+	  
+	  <details>
+  <summary>
+    Ik had al een goedkeuring of zat in een zorgtraject vóór 1 februari 2026. Wat nu?
+  </summary>
+
+  <p>
+    Wie <strong>vóór 1 februari 2026</strong> al een geldige <strong>machtiging</strong>
+    had voor een GLP-1-analoog (bijvoorbeeld via het zorgtraject of een eerdere aanvraag),
+    <strong>verliest die niet automatisch</strong>.
+  </p>
+
+  <p>
+    In de praktijk geldt:
+  </p>
+
+  <ul>
+    <li>
+      Een <strong>bestaande machtiging</strong> blijft geldig tot het einde van haar
+      voorziene geldigheidsduur.
+    </li>
+    <li>
+      Bij <strong>verlenging</strong> of een <strong>nieuwe aanvraag</strong> gelden
+      vanaf 1 februari 2026 altijd de nieuwe regels.
+    </li>
+    <li>
+      Een vermelding “zorgtraject diabetes” op het voorschrift
+      <strong>alleen is niet meer voldoende</strong>.
+    </li>
+  </ul>
+
+  <p>
+    Twijfelt u of uw goedkeuring nog geldig is?
+    Vraag dit na bij uw <strong>apotheker</strong>, <strong>arts</strong>
+    of <strong>mutualiteit</strong>.
+  </p>
+</details>
+
+
+      <details>
+        <summary>Ik zit in een diabetes zorgtraject. Is dat nog genoeg?</summary>
+        <p>
+          Nee. Vanaf 01/02/2026 volstaat “zorgtraject diabetes” op het voorschrift niet meer voor terugbetaling van GLP-1-analogen.
+          Een voorafgaande machtiging van de adviserend arts van de mutualiteit is ook nodig.
+        </p>
+      </details>
+
+      <details>
+        <summary>Wie controleert dit in de apotheek?</summary>
+        <p>
+          De apotheker controleert elektronisch of de machtiging aanwezig is (MyCareNet / Hoofdstuk IV).
+        </p>
+      </details>
+
+      <details>
+        <summary>Wat als ik geen machtiging heb op 1 februari 2026?</summary>
+        <p>
+          Dan kan de terugbetaling mogelijk niet toegepast worden. U kunt dan tijdelijk meer zelf moeten betalen,
+          totdat de machtiging in orde is. Neem contact op met uw arts en/of mutualiteit.
+        </p>
+      </details>
+
+      <details>
+        <summary>Gaat dit over “Ozempic voor vermagering”?</summary>
+        <p>
+          De officiële motivatie verwijst naar het tegengaan van oneigenlijk gebruik van terugbetaling buiten de diabetes-indicatie.
+          De maatregel zelf gaat over de terugbetaling en maakt de machtiging verplicht.
+        </p>
+      </details>
+    </section>
+
+    <section class="card sources" id="bronnen" style="margin-top:14px;">
+      <h2>Officiële bronnen (aan te raden om te bewaren)</h2>
+      <p class="muted">
+        Hieronder staan links naar officiële of beroeps-instellingen met de uitleg over de wijziging vanaf 1 februari 2026.
+      </p>
+
+      <h3>RIZIV / INAMI (officieel)</h3>
+      <ul>
+        <li>
+          RIZIV nieuwsbericht (NL): “Vanaf 1 februari 2026 is een machtiging van het ziekenfonds nodig …”
+          <br/><a href="https://www.riziv.fgov.be/nl/nieuws/antidiabetica-vanaf-1-februari-is-een-machtiging-van-het-ziekenfonds-nodig-voor-de-terugbetaling-van-ozempic-en-andere-glp-1-analogen" target="_blank" rel="noopener">Open bron</a>
+        </li>
+        <li>
+          INAMI nieuwsbericht (FR): “Une autorisation de la mutualité sera indispensable …”
+          <br/><a href="https://www.inami.fgov.be/fr/actualites/medicaments-antidiabetiques-une-autorisation-de-la-mutualite-sera-indispensable-pour-le-remboursement-d-ozempic-et-des-autres-glp-1-a-partir-du-1er-fevrier" target="_blank" rel="noopener">Open bron</a>
+        </li>
+        <li>
+          RIZIV perspagina / achtergrond (NL): “Gewijzigde terugbetaling voor Ozempic en andere GLP-1-analogen”
+          <br/><a href="https://www.riziv.fgov.be/nl/pers/antidiabetica-een-gewijzigde-terugbetaling-voor-ozempic-en-de-andere-glp-1-analogen" target="_blank" rel="noopener">Open bron</a>
+        </li>
+        <li>
+          RIZIV themapagina semaglutide (NL): “Afleveren van geneesmiddelen op basis van semaglutide (Ozempic®, Rybelsus®, …)”
+          <br/><a href="https://www.riziv.fgov.be/nl/thema-s/verzorging-kosten-en-terugbetaling/wat-het-ziekenfonds-terugbetaalt/geneesmiddelen/geneesmiddel-afleveren/afleveren-van-geneesmiddelen-op-basis-van-semaglutide-ozempic-r-rybelsus-r-etc" target="_blank" rel="noopener">Open bron</a>
+        </li>
+      </ul>
+
+      <h3>Apothekersorganisatie</h3>
+      <ul>
+        <li>
+          APB (NL): “GLP-1 analogen: overgangsperiode eindigt op 1 februari”
+          <br/><a href="https://www.apb.be/nl-BE/Artikel/glp-1-analogen-overgangsperiode-eindigt-op-1-februari~2731NL" target="_blank" rel="noopener">Open bron</a>
+        </li>
+      </ul>
+
+      </div>
+    </section>
+
+    <section class="card" id="disclaimer-dlml" style="margin-top:14px;">
+  <h2>Extra disclaimer – Diabetes Liga Midden-Limburg</h2>
+
+  <p>
+    Deze informatie wordt verspreid door <strong>Diabetes Liga Midden-Limburg</strong>
+    als <strong>dienstverlening en sensibilisering</strong> voor personen met diabetes
+    en hun omgeving.
+  </p>
+
+  <p>
+    Diabetes Liga Midden-Limburg is <strong>geen zorgverlener</strong> en
+    <strong>neemt geen beslissingen</strong> over medische behandelingen,
+    voorschriften of terugbetalingen.
+  </p>
+
+  <p>
+    De inhoud van deze pagina is gebaseerd op <strong>officiële informatie van het RIZIV/INAMI
+    en andere erkende instanties</strong>, maar kan <strong>geen individuele beoordeling</strong>
+    van uw dossier vervangen.
+  </p>
+
+  <p class="muted small">
+    Voor uw persoonlijke situatie (goedkeuring, verlenging, stopzetting of weigering van terugbetaling)
+    neemt u steeds contact op met uw <strong>arts</strong>, <strong>apotheker</strong>
+    of <strong>ziekenfonds (mutualiteit)</strong>.
+  </p>
+</section>
+
+
+    <footer class="container" style="padding-top:18px;">
+      <p class="muted small" style="margin:0;">
+  Laatst nagekeken op <strong>1 februari 2026</strong>.  
+  Diabetes Liga Midden-Limburg verstrekt deze informatie als algemene duiding,
+  gebaseerd op de toen geldende officiële bronnen.
+  <br/>
+  Regelgeving, interpretatie en terugbetalingsvoorwaarden kunnen op elk moment wijzigen.
+  Aan deze tekst kunnen geen rechten worden ontleend.
+</p>
+
+
+    </footer>
+  </main>
+  
+  <button id="backToTop" aria-label="Terug naar boven">
+  ⬆︎
+</button>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+  
+</body>
+</html>
