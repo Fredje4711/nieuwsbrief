@@ -17,7 +17,6 @@
       --line:#e6edf5;
       --shadow: 0 8px 24px rgba(16,42,67,.08);
       --radius:16px;
-      /* Versmalde max-breedte voor betere leesbaarheid in één kolom */
       --max: 850px; 
     }
     *{box-sizing:border-box}
@@ -63,8 +62,6 @@
       padding: 24px;
     }
     h2{margin:0 0 12px 0; font-size:1.3rem; border-bottom: 2px solid var(--bg); padding-bottom: 8px;}
-    h3{margin:16px 0 8px 0; font-size:1.05rem}
-    .muted{color:var(--muted)}
     .small{font-size:.95rem; color:var(--muted)}
 
     .warning{
@@ -113,7 +110,7 @@
       align-items: center;
     }
     .q .txt{font-weight:700; line-height:1.35; color: var(--ink)}
-    .q .hint{grid-column:1/-1; color:var(--muted); font-size:.90rem; border-top: 1px dashed var(--line); pt: 8px; margin-top: 4px; padding-top: 8px;}
+    .q .hint{grid-column:1/-1; color:var(--muted); font-size:.90rem; border-top: 1px dashed var(--line); margin-top: 4px; padding-top: 8px;}
 
     button.copy{
       border:1px solid rgba(35,169,228,.35);
@@ -129,6 +126,27 @@
     }
     button.copy:hover{background: var(--brand); color: white;}
 
+    .footnote-box {
+      margin-top: 25px;
+      padding: 14px 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .disclaimer-box {
+      border-left:4px solid #23A9E4;
+      background: rgba(35,169,228,.05);
+      padding: 16px;
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
     #toast{
       position: fixed;
       left: 50%;
@@ -143,19 +161,8 @@
       pointer-events:none;
       transition: opacity .2s ease;
       z-index: 9999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     #toast.show{opacity:1}
-
-    .disclaimer-box {
-      border-left:4px solid #23A9E4;
-      background: rgba(35,169,228,.05);
-      padding: 16px;
-      border-radius: 12px;
-      color: var(--muted);
-      margin-top: 25px;
-      font-size: 0.95rem;
-    }
 
     @media (max-width: 600px){
       .q{grid-template-columns: 1fr;}
@@ -247,26 +254,35 @@
       </details>
 
       <details>
-        <summary>🎙️ Spraaktest (gsm – liefst max. 2 minuten)</summary>
+        <summary>
+          🎙️ Spraaktest (gsm – liefst max. 2 minuten)
+          <span style="display: block; font-size: 0.85rem; font-weight: 400; color: var(--muted); margin-top: 4px;">
+            Op gsm kan er een zeer kleine vertraging zijn. Dat is normaal.
+          </span>
+        </summary>
         <div class="qgrid">
           <div class="q">
             <div class="txt">Spreek dit in: “Geef alle activiteiten.”</div>
-            <div class="hint">Op gsm kan er een kleine vertraging zijn. Dat is normaal.</div>
+            <div class="hint">Verwacht: Overzicht van de planning.</div>
+          </div>
+          <div class="q">
+            <div class="txt">Opvolgvraag indien nodig voor meer detail: “Geef alle details van de activiteiten.”</div>
           </div>
           <div class="q">
             <div class="txt">Spreek dit in: “Wie zijn de bestuursleden.”</div>
             <div class="hint">Verwacht: Opsomming van alle bestuursleden.</div>
           </div>
           <div class="q">
-            <div class="txt">Meer detail vereist -- Spreek dit in als opvolgvraag: “Geef alle details van de bestuursleden.”</div>
-            <div class="hint">Verwacht: Details van alle bestuursleden.</div>
+            <div class="txt">Opvolgvraag indien nodig voor meer detail: “Geef alle details van de bestuursleden.”</div>
           </div>
         </div>
-        <p class="small" style="padding: 0 16px 16px;">
-          Op gsm kan de chatbot soms pas openen na 2 tikken op het chat-icoon. Dat is ok.<br>
-          Lijkt de stem een heel klein beetje later te starten? Dat kan: de telefoon zet eerst je spraak om naar tekst.
-        </p>
       </details>
+
+      <!-- NIEUWE LOCATIE VOOR DE MEDEDELING / VOETNOOT -->
+      <div class="footnote-box">
+        <strong>💡 Gebruikstip:</strong> Op gsm kan de chatbot soms pas openen na twee tikken op het chat-icoon. Dat is normaal gedrag. 
+        
+      </div>
 
       <div class="disclaimer-box">
         <strong>Medische disclaimer:</strong> Deze chatbot geeft algemene info en vervangt geen medisch advies.
