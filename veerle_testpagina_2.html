@@ -10,6 +10,31 @@
   <script src="https://cdn.jotfor.ms/agent/embedjs/019c129b986b71e3979b3d2e7af668cd4a6e/embed.js"></script>
 
   <style>
+  
+  /* 1. Verwijder de 300ms vertraging op de hele pagina */
+html, body {
+    touch-action: manipulation !important;
+}
+
+/* 2. Zorg dat de chatbot ALTIJD bovenop alles ligt, zelfs op onzichtbare lagen */
+#jotform-agent-container, 
+.jotform-agent-embed, 
+iframe[src*="jotform"] {
+    pointer-events: auto !important;
+    z-index: 2147483647 !important; /* Dit is het hoogst mogelijke getal in webcode */
+}
+
+/* 3. Voorkom dat de 'wrap' container (de witte/blauwe vlakken) de hoek blokkeert */
+@media (max-width: 600px) {
+    .wrap {
+        /* Dit zorgt dat de container zelf geen kliks 'vangt' in de marges */
+        pointer-events: none; 
+    }
+    .hero, .card, .chatbot-help-link, details, button, a {
+        /* Dit zorgt dat de tekst en knoppen binnen de wrap WEL klikbaar blijven */
+        pointer-events: auto;
+    }
+}
     :root{
       --brand:#23A9E4;
       --brand2:#138ccc;
