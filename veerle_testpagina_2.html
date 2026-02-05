@@ -6,6 +6,9 @@
   <title>Testpagina – Veerle (DLML Chatbot)</title>
   <meta name="description" content="Testpagina voor bestuursleden: test Veerle (DLML chatbot) met typen en spraak, met voorbeeldvragen." />
 
+  <!-- JOTFORM CHATBOT EMBED (Verplaatst naar Head voor snellere initialisatie op gsm) -->
+  <script src="https://cdn.jotfor.ms/agent/embedjs/019c129b986b71e3979b3d2e7af668cd4a6e/embed.js"></script>
+
   <style>
     :root{
       --brand:#23A9E4;
@@ -164,7 +167,26 @@
     }
     #toast.show{opacity:1}
 
+    .creative-note {
+      margin-top: 15px; 
+      padding: 14px; 
+      background: #f0f9ff; 
+      border: 1px dashed #23A9E4; 
+      border-radius: 12px;
+    }
+
+    /* MOBIELE FIX VOOR CHATBOT RESPONSIVITEIT */
+    iframe[src*="jotform"], 
+    .jotform-agent-embed, 
+    #jotform-agent-container {
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: transparent !important;
+        pointer-events: auto !important;
+        z-index: 999999 !important;
+    }
+
     @media (max-width: 600px){
+      .wrap{padding-bottom: 20px !important;}
       .q{grid-template-columns: 1fr;}
       button.copy{width: 100%; text-align: center;}
       h1{font-size: 1.5rem;}
@@ -299,14 +321,13 @@
         </div>
       </details>
 
-      <!-- NIEUWE LOCATIE VOOR DE MEDEDELING / VOETNOOT -->
+      <!-- GEBRUIKSTIP VOETNOOT -->
       <div class="footnote-box">
         <strong>💡 Gebruikstip:</strong> Op gsm kan de chatbot soms pas openen na twee tikken op het chat-icoon. Dat is normaal gedrag. 
-        
       </div>
 	  
 	  <!-- PERSOONLIJKE NOOT SECTIE -->
-      <div class="creative-note" style="margin-top: 15px; padding: 14px; background: #f0f9ff; border: 1px dashed #23A9E4; border-radius: 12px;">
+      <div class="creative-note">
         <h3 style="margin: 0 0 6px 0; color: #0b5f8a; font-size: 1.05rem; display: flex; align-items: center; gap: 6px;">
           ✨ Persoonlijke & Creatieve noot
         </h3>
@@ -363,9 +384,6 @@
       });
     })();
   </script>
-
-  <!-- JOTFORM CHATBOT EMBED -->
-  <script src="https://cdn.jotfor.ms/agent/embedjs/019c129b986b71e3979b3d2e7af668cd4a6e/embed.js"></script>
 
   <noscript>
     Deze pagina gebruikt JavaScript om de chatbot te laden. Zet JavaScript aan om te testen.
