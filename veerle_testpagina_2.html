@@ -184,13 +184,17 @@
         pointer-events: auto !important;
         z-index: 999999 !important;
     }
-
-    @media (max-width: 600px){
-      .wrap{padding-bottom: 20px !important;}
-      .q{grid-template-columns: 1fr;}
-      button.copy{width: 100%; text-align: center;}
-      h1{font-size: 1.5rem;}
+/* Maak de onzichtbare raak-zone van de chatbot groter op mobiel */
+@media (max-width: 600px) {
+    .jotform-agent-embed, 
+    #jotform-agent-container,
+    iframe[id*="jotform"] {
+        width: 80px !important;  /* Iets breder */
+        height: 80px !important; /* Iets hoger */
+        min-width: 80px !important;
+        min-height: 80px !important;
     }
+}
   </style>
 </head>
 
