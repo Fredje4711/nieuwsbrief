@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Liga Midden-Limburg App</title>
+  
+  <!-- LOGO INSTELLINGEN VOOR GSM -->
+  <link rel="apple-touch-icon" href="icon-512x512.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <script>
+    // HET CRUCIALE SCRIPT:
+    // Als dit bestand geopend wordt als "app" vanaf het startscherm,
+    // spring dan direct naar de echte website.
+    if (window.navigator.standalone === true || 
+        window.matchMedia('(display-mode: standalone)').matches || 
+        window.location.search.includes('mode=webapp')) {
+        window.location.href = "https://www.dlml.be";
+    }
+
+    // Functies voor de testknoppen en device detectie
+    function showPlatform(type) {
+      const alertBox = document.getElementById('detection-alert');
+      document.getElementById('info-ios').style.display = 'none';
+      document.getElementById('info-android').style.display = 'none';
+      document.getElementById('info-pc').style.display = 'none';
+
+      if (type === 'ios') {
+        alertBox.innerHTML = "📇 Weergave-test: iPhone gsm";
+        document.getElementById('info-ios').style.display = 'block';
+      } else if (type === 'android') {
+        alertBox.innerHTML = "📇 Weergave-test: Android gsm";
+        document.getElementById('info-android').style.display = 'block';
+      } else {
+        alertBox.innerHTML = "💻 U opent dit op uw Computer";
+        document.getElementById('info-pc').style.display = 'block';
+      }
+    }
+
+    function detectDevice() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (!(/Android|iPhone|iPad|iPod/i.test(ua))) {
+        document.getElementById('test-panel').style.display = 'block';
+        showPlatform('pc');
+      } else {
+        if (/iPhone|iPad|iPod/i.test(ua)) showPlatform('ios');
+        else showPlatform('android');
+      }
+    }
+    window.onload = detectDevice;
+  </script>
+  
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.4; color: #333; margin: 0; background-color: #f4f7f9; }
+    header { background: #23A9E4; color: white; padding: 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 1.3rem; }
+    header p { margin: 5px 0 0; font-size: 0.85rem; opacity: 0.9; }
+    main { max-width: 550px; margin: 0 auto; padding: 10px; }
+    .nav-back { background: #138ccc; padding: 14px; text-align: center; }
+    .nav-back a { color: #ffffff; font-size: 18px; font-weight: 700; text-decoration: none; }
+    #detection-alert { background: #ffffff; border: 2px solid #23A9E4; color: #23A9E4; padding: 10px 15px; border-radius: 12px; text-align: center; margin-bottom: 12px; font-weight: bold; font-size: 0.95rem; }
+    .card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+    h2 { color: #23A9E4; margin: 0 0 10px 0; font-size: 1.15rem; }
+    .step-list { display: flex; flex-direction: column; gap: 10px; }
+    .step { display: flex; align-items: flex-start; background: #f9f9f9; padding: 12px; border-radius: 8px; gap: 12px; }
+    .step-number { background: #23A9E4; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+    .step-text { font-size: 0.95rem; line-height: 1.4; }
+    .pc-box { background: #fff5f5; border: 2px solid #c82333; padding: 20px; border-radius: 12px; color: #c82333; text-align: center; }
+    .safari-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 12px; border-radius: 8px; margin-bottom: 12px; color: #856404; font-size: 0.9rem; }
+    .test-panel { margin-top: 30px; padding: 15px; background: #e2e8f0; border-radius: 12px; border: 2px dashed #64748b; text-align: center; }
+    .test-btn { padding: 10px 15px; margin: 5px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: #64748b; color: white; }
+  </style>
+</head>
+<body>
+
+<div class="nav-back">
+  <a href="nieuwsbrief_finaal_1.html">⬅ Terug naar de nieuwsbrief</a>
+</div>
+
+<header>
+  <h1>De Diabetes Liga Midden-Limburg gsm app</h1>
+  <p>Installeer onze website als app op uw smartphone</p>
+</header>
+
+<main>
+  <div id="detection-alert">Toestel herkennen...</div>
+
+  <!-- PC MELDING -->
+  <div id="info-pc" class="platform-info">
+    <div class="pc-box">
+      <h2>Stoppen: Gebruik uw gsm</h2>
+      <p>Deze app-installatie werkt alleen op uw <b>smartphone (gsm)</b>.</p>
+      <p>1. Pak uw smartphone.<br>
+         2. Open de e-mail met de nieuwsbrief op uw smartphone.<br>
+         3. Klik daar op de knop om deze installatie opnieuw te openen.</p>
+    </div>
+  </div>
+
+  <!-- ANDROID -->
+  <div id="info-android" class="platform-info">
+    <div class="card">
+        <p>Door onze website als app op uw gsm te installeren, heeft u de Diabetes Liga Midden-Limburg altijd direct tussen uw andere apps staan.</p>
+    </div>
+    <div class="card">
+      <h2>Installeren op Android</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Tik rechtsboven op de <b>drie puntjes (⋮)</b>.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Tik op <b>"Toevoegen aan startscherm"</b> of <b>"App installeren"</b>.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Tik op <b>"Toevoegen"</b>. De app staat nu tussen uw andere apps.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iPhone -->
+  <div id="info-ios" class="platform-info">
+    <div class="card">
+        <p>Door onze website als app op uw gsm te installeren, heeft u de Diabetes Liga Midden-Limburg altijd direct tussen uw andere apps staan.</p>
+    </div>
+    <div class="card">
+      <h2>Installeren op iPhone</h2>
+      <div class="safari-box">
+        <strong>Belangrijk:</strong> Gebruik de <b>Safari</b> browser voor deze stappen.
+      </div>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Tik onderaan op het <b>Deel-icoon</b> (vierkantje met pijl omhoog).</div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Scroll omlaag en tik op <b>"Zet op beginscherm"</b>.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Tik rechtsboven op <b>"Voeg toe"</b>. Klaar!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEST PANEEL -->
+  <div id="test-panel" class="test-panel" style="display:none;">
+    <p>Hulpmiddel voor de maker:</p>
+    <button class="test-btn" onclick="showPlatform('android')">Test Android</button>
+    <button class="test-btn" onclick="showPlatform('ios')">Test iPhone</button>
+    <button class="test-btn" onclick="showPlatform('pc')">Reset</button>
+  </div>
+</main>
+
+<footer style="text-align:center; padding: 20px; color: #888; font-size: 0.8rem;">
+  © 2026 – Diabetes Liga Midden-Limburg
+</footer>
+
+</body>
+</html>
