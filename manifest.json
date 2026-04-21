@@ -1,0 +1,15 @@
+{
+  "name": "Diabetes Liga Midden-Limburg",
+  "short_name": "DLML",
+  "start_url": "website_installatie.html?mode=webapp",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#23A9E4",
+  "icons": [
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
