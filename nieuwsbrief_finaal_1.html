@@ -8,14 +8,19 @@
     /* Algemene optimalisaties voor mobiel */
     @media screen and (max-width: 600px) {
       .container { width: 100% !important; border: none !important; }
-      .content-pad { padding: 15px 15px !important; }
+      .content-pad { padding: 12px 15px !important; }
       .body-text { font-size: 16px !important; line-height: 1.4 !important; }
-      .btn-table { width: 85% !important; } /* Knop iets breder op mobiel voor duim-bereik */
-      img.app-img { width: 75% !important; }
+      .btn-table { width: 85% !important; } 
+      
+      /* Afbeelding formaten voor balans */
+      img.app-img { width: 55% !important; } 
+      img.duel-img { width: 45% !important; }
+      img.logo-img { width: 30% !important; }
     }
     
     body { margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif; -webkit-text-size-adjust: 100%; }
     table { border-collapse: collapse; }
+    h2 { color: #23A9E4; font-size: 18px; text-align: center; margin: 0 0 10px 0; }
   </style>
 </head>
 <body style="margin:0; padding:5px 0; background-color:#f4f4f4;">
@@ -24,13 +29,13 @@
     <tr>
       <td align="center">
         
-        <!-- CONTAINER -->
+        <!-- HOOFDCONTAINER -->
         <table class="container" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border: 1px solid #23A9E4;">
           
           <!-- HEADER BANNER -->
           <tr>
             <td align="center">
-              <img src="https://fredje4711.github.io/nieuwsbrief/banner.png" alt="Diabetes Liga" width="600" style="display:block; width:100%; height:auto;">
+              <img src="https://fredje4711.github.io/nieuwsbrief/banner.png" alt="Diabetes Liga Midden-Limburg" width="600" style="display:block; width:100%; height:auto;">
             </td>
           </tr>
 
@@ -38,20 +43,20 @@
           <tr>
             <td class="content-pad" style="padding: 15px 25px; text-align: center;">
               <p style="font-size: 16px; line-height: 1.4; color: #333333; margin: 0;">
-                Wij hebben vier nieuwe hulpmiddelen ontwikkeld om het u gemakkelijker te maken. 
+                Wij hebben <strong>vijf</strong> nieuwe hulpmiddelen ontwikkeld om het u gemakkelijker te maken. 
                 <strong>Leest u dit op uw computer?</strong> Open deze mail dan op uw <strong>smartphone</strong> om de apps te installeren.
               </p>
             </td>
           </tr>
 
-          <!-- APP 1: ACTIVITEITEN -->
+          <!-- 1. ACTIVITEITEN APP -->
           <tr><td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top: 2px solid #23a9e4; font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table></td></tr>
           <tr>
             <td class="content-pad" style="padding: 15px 20px;">
               <div align="center">
                 <img src="https://fredje4711.github.io/nieuwsbrief/activiteiten_afbeelding.png" class="app-img" width="220" style="display:block; width:55%; border-radius: 10px; margin-bottom: 10px; border: 1px solid #eee;">
               </div>
-              <h2 style="color: #23A9E4; font-size: 18px; text-align: center; margin: 0 0 10px 0;">1. De DLML Activiteiten App</h2>
+              <h2>1. De Diabetes Liga Midden-Limburg Activiteiten App</h2>
               <table class="btn-table" align="center" cellspacing="0" cellpadding="0" border="0" width="240">
                 <tr>
                   <td bgcolor="#23A9E4" style="border-radius: 50px; text-align: center;">
@@ -62,14 +67,14 @@
             </td>
           </tr>
 
-          <!-- APP 2: SCANNER -->
+          <!-- 2. SCANNER APP -->
           <tr><td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top: 2px solid #23a9e4; font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table></td></tr>
           <tr>
             <td class="content-pad" style="padding: 15px 20px;">
               <div align="center">
                 <img src="https://fredje4711.github.io/nieuwsbrief/scanner_afbeelding.png" class="app-img" width="220" style="display:block; width:55%; border-radius: 10px; margin-bottom: 10px; border: 1px solid #eee;">
               </div>
-              <h2 style="color: #23A9E4; font-size: 18px; text-align: center; margin: 0 0 10px 0;">2. De Koolhydraten Scanner App</h2>
+              <h2>2. De Koolhydraten Scanner App</h2>
               <table class="btn-table" align="center" cellspacing="0" cellpadding="0" border="0" width="240">
                 <tr>
                   <td bgcolor="#23A9E4" style="border-radius: 50px; text-align: center;">
@@ -80,14 +85,14 @@
             </td>
           </tr>
 
-          <!-- APP 3: CALCULATOR -->
+          <!-- 3. CALCULATOR -->
           <tr><td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top: 2px solid #23a9e4; font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table></td></tr>
           <tr>
             <td class="content-pad" style="padding: 15px 20px;">
               <div align="center">
                 <img src="https://fredje4711.github.io/carbo-app/Koolhydraten_calculator.png" class="app-img" width="220" style="display:block; width:55%; border-radius: 10px; margin-bottom: 10px; border: 1px solid #eee;">
               </div>
-              <h2 style="color: #23A9E4; font-size: 18px; text-align: center; margin: 0 0 10px 0;">3. De Koolhydraten Calculator</h2>
+              <h2>3. De Koolhydraten Calculator</h2>
               <table class="btn-table" align="center" cellspacing="0" cellpadding="0" border="0" width="240">
                 <tr>
                   <td bgcolor="#23A9E4" style="border-radius: 50px; text-align: center;">
@@ -98,14 +103,14 @@
             </td>
           </tr>
 
-          <!-- APP 4: DUEL -->
+          <!-- 4. DUEL -->
           <tr><td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top: 2px solid #23a9e4; font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table></td></tr>
           <tr>
             <td class="content-pad" style="padding: 15px 20px;">
               <div align="center">
-                <img src="https://fredje4711.github.io/carbo-app/Koolhydraten_duel.png" class="app-img" width="220" style="display:block; width:55%; border-radius: 10px; margin-bottom: 10px; border: 1px solid #eee;">
+                <img src="https://fredje4711.github.io/carbo-app/Koolhydraten_duel.png" class="duel-img" width="180" style="display:block; width:45%; border-radius: 10px; margin-bottom: 10px; border: 1px solid #eee;">
               </div>
-              <h2 style="color: #23A9E4; font-size: 18px; text-align: center; margin: 0 0 10px 0;">4. Het Koolhydraten Duel</h2>
+              <h2>4. Het Koolhydraten Duel</h2>
               <table class="btn-table" align="center" cellspacing="0" cellpadding="0" border="0" width="240">
                 <tr>
                   <td bgcolor="#23A9E4" style="border-radius: 50px; text-align: center;">
@@ -116,9 +121,27 @@
             </td>
           </tr>
 
+          <!-- 5. ALGEMENE WEBSITE APP -->
+          <tr><td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top: 2px solid #23a9e4; font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table></td></tr>
+          <tr>
+            <td class="content-pad" style="padding: 15px 20px;">
+              <div align="center">
+                <img src="https://fredje4711.github.io/nieuwsbrief/icon-512x512.png" class="logo-img" width="130" style="display:block; width:30%; border-radius: 15px; margin-bottom: 10px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+              </div>
+              <h2>5. De Diabetes Liga Midden-Limburg gsm app</h2>
+              <table class="btn-table" align="center" cellspacing="0" cellpadding="0" border="0" width="240">
+                <tr>
+                  <td bgcolor="#23A9E4" style="border-radius: 50px; text-align: center;">
+                    <a href="https://fredje4711.github.io/nieuwsbrief/website_installatie.html" style="font-size: 16px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 12px 20px; display: block; text-align: center;">Bekijk en Installeer App &rarr;</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
           <!-- FOOTER -->
           <tr>
-            <td style="padding: 8px 20px; background-color: #CCE9F8; text-align: center;">
+            <td style="padding: 10px 20px; background-color: #CCE9F8; text-align: center;">
               <p style="font-size: 11px; color: #23A9E4; margin: 0;">© 2026 Diabetes Liga Midden-Limburg</p>
             </td>
           </tr>
