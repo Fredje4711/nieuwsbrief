@@ -12,16 +12,14 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <script>
-    // HET CRUCIALE SCRIPT:
-    // Als dit bestand geopend wordt als "app" vanaf het startscherm,
-    // spring dan direct naar de echte website.
+    // DOORSTUUR SCRIPT: 
+    // Als de pagina wordt geopend vanuit het startscherm (als app)
     if (window.navigator.standalone === true || 
         window.matchMedia('(display-mode: standalone)').matches || 
         window.location.search.includes('mode=webapp')) {
         window.location.href = "https://www.dlml.be";
     }
 
-    // Functies voor de testknoppen en device detectie
     function showPlatform(type) {
       const alertBox = document.getElementById('detection-alert');
       document.getElementById('info-ios').style.display = 'none';
@@ -29,10 +27,10 @@
       document.getElementById('info-pc').style.display = 'none';
 
       if (type === 'ios') {
-        alertBox.innerHTML = "📇 Weergave-test: iPhone gsm";
+        alertBox.innerHTML = "📇 U opent dit op uw iPhone";
         document.getElementById('info-ios').style.display = 'block';
       } else if (type === 'android') {
-        alertBox.innerHTML = "📇 Weergave-test: Android gsm";
+        alertBox.innerHTML = "📇 U opent dit op uw Android smartphone";
         document.getElementById('info-android').style.display = 'block';
       } else {
         alertBox.innerHTML = "💻 U opent dit op uw Computer";
@@ -42,12 +40,12 @@
 
     function detectDevice() {
       const ua = navigator.userAgent || navigator.vendor || window.opera;
-      if (!(/Android|iPhone|iPad|iPod/i.test(ua))) {
-        document.getElementById('test-panel').style.display = 'block';
-        showPlatform('pc');
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        showPlatform('ios');
+      } else if (/Android/i.test(ua)) {
+        showPlatform('android');
       } else {
-        if (/iPhone|iPad|iPod/i.test(ua)) showPlatform('ios');
-        else showPlatform('android');
+        showPlatform('pc');
       }
     }
     window.onload = detectDevice;
@@ -70,8 +68,8 @@
     .step-text { font-size: 0.95rem; line-height: 1.4; }
     .pc-box { background: #fff5f5; border: 2px solid #c82333; padding: 20px; border-radius: 12px; color: #c82333; text-align: center; }
     .safari-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 12px; border-radius: 8px; margin-bottom: 12px; color: #856404; font-size: 0.9rem; }
-    .test-panel { margin-top: 30px; padding: 15px; background: #e2e8f0; border-radius: 12px; border: 2px dashed #64748b; text-align: center; }
-    .test-btn { padding: 10px 15px; margin: 5px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; background: #64748b; color: white; }
+    .btn-primary { display: block; background: #23A9E4; color: white; border-radius: 999px; padding: 1rem; text-align: center; text-decoration: none; font-weight: bold; margin-top: 5px; font-size: 1.1rem; }
+    .platform-info { display: none; }
   </style>
 </head>
 <body>
@@ -99,13 +97,15 @@
     </div>
   </div>
 
-  <!-- ANDROID -->
+  <!-- ANDROID INSTRUCTIES -->
   <div id="info-android" class="platform-info">
     <div class="card">
         <p>Door onze website als app op uw gsm te installeren, heeft u de Diabetes Liga Midden-Limburg altijd direct tussen uw andere apps staan.</p>
+        <a href="https://www.dlml.be" target="_blank" class="btn-primary">Stap 1: Ga naar de website</a>
+        <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 10px;">(De website opent nu. Kom daarna terug naar deze pagina voor de laatste stap.)</p>
     </div>
     <div class="card">
-      <h2>Installeren op Android</h2>
+      <h2>Stap 2: De app installeren</h2>
       <div class="step-list">
         <div class="step">
           <div class="step-number">1</div>
@@ -113,7 +113,7 @@
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <div class="step-text">Tik op <b>"Toevoegen aan startscherm"</b> of <b>"App installeren"</b>.</div>
+          <div class="step-text">Tik in de lijst op <b>"Toevoegen aan startscherm"</b> of <b>"App installeren"</b>.</div>
         </div>
         <div class="step">
           <div class="step-number">3</div>
@@ -123,13 +123,15 @@
     </div>
   </div>
 
-  <!-- iPhone -->
+  <!-- iPHONE INSTRUCTIES -->
   <div id="info-ios" class="platform-info">
     <div class="card">
         <p>Door onze website als app op uw gsm te installeren, heeft u de Diabetes Liga Midden-Limburg altijd direct tussen uw andere apps staan.</p>
+        <a href="https://www.dlml.be" target="_blank" class="btn-primary">Stap 1: Ga naar de website</a>
+        <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 10px;">(De website opent nu. Kom daarna terug naar deze pagina voor de laatste stap.)</p>
     </div>
     <div class="card">
-      <h2>Installeren op iPhone</h2>
+      <h2>Stap 2: De app installeren</h2>
       <div class="safari-box">
         <strong>Belangrijk:</strong> Gebruik de <b>Safari</b> browser voor deze stappen.
       </div>
@@ -148,14 +150,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- TEST PANEEL -->
-  <div id="test-panel" class="test-panel" style="display:none;">
-    <p>Hulpmiddel voor de maker:</p>
-    <button class="test-btn" onclick="showPlatform('android')">Test Android</button>
-    <button class="test-btn" onclick="showPlatform('ios')">Test iPhone</button>
-    <button class="test-btn" onclick="showPlatform('pc')">Reset</button>
   </div>
 </main>
 
