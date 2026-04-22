@@ -3,7 +3,7 @@
   "short_name": "DLML",
   "start_url": "website_installatie.html?mode=webapp",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#23A9E4",
   "theme_color": "#23A9E4",
   "icons": [
     {
