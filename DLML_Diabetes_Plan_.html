@@ -50,10 +50,10 @@
         
         .slide-link { 
             display: inline-block; background: #eef9ff; color: var(--dark-blue); 
-            text-decoration: none; font-size: 0.78rem; font-weight: bold; 
+            text-decoration: none; border: none; font-family: inherit; font-size: 0.78rem; font-weight: bold; 
             padding: 4px 10px; border-radius: 20px; border: 1.5px solid var(--brand-blue);
             margin: 4px 2px; vertical-align: middle; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            white-space: nowrap;
+            white-space: nowrap; cursor: pointer;
         }
         .slide-link i { color: #e74c3c; margin-right: 4px; }
 
@@ -79,7 +79,7 @@
         .source-item { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 12px; background: #f9f9f9; border-bottom: 1px solid #eee;
-            text-decoration: none; color: #333; font-size: 0.9rem;
+            text-decoration: none; color: #333; font-size: 0.9rem; cursor: pointer;
         }
         .source-item i { color: #e74c3c; font-size: 1.1rem; margin-right: 10px; }
 
@@ -95,7 +95,7 @@
 <body>
 
 <div class="navbar">
-    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Conditie is uw energetische reserve')">1. De Basis</button>
+    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Fitheid is uw energetische reserve')">1. De Basis</button>
     <button class="nav-btn" onclick="switchTab(this, 'plan', 'Uw wetenschappelijk beweegrecept')">2. Plan</button>
     <button class="nav-btn" onclick="switchTab(this, 'revolutie', 'Primeur: De hart-revolutie 2026')">3. Revolutie</button>
     <button class="nav-btn" onclick="switchTab(this, 'grafieken', 'De harde cijfers achter de theorie')">4. Bewijs</button>
@@ -113,7 +113,7 @@
     <div id="basis" class="page-section active">
         <div class="instruction-tip">
             <i class="fas fa-info-circle"></i>
-            Tip: Tik op knoppen zoals <span class="mini-badge">Slide X</span> om de originele pagina in de browser te bekijken.
+            Tip: Tik op knoppen zoals <span class="mini-badge">Slide X</span> om de originele pagina direct in de browser te bekijken.
         </div>
 
         <div class="card">
@@ -210,8 +210,8 @@
                 <button onclick="openPDF(18)" class="slide-link"><i class="fas fa-file-pdf"></i> Bekijk Slide 18</button>
             </p>
             <svg viewBox="0 0 400 120" class="chart-svg">
-                <path d="M40 20 C 80 90, 320 90, 380 30" fill="none" stroke="var(--brand-blue)" stroke-width="4" />
-                <circle cx="210" cy="75" r="8" fill="red" />
+                <path d="M40 20 C 80 100, 320 100, 380 30" fill="none" stroke="var(--brand-blue)" stroke-width="4" />
+                <circle cx="210" cy="85" r="8" fill="red" />
                 <text x="130" y="110" font-size="14" font-weight="bold">Ideaal: ± 4 uur per week</text>
             </svg>
             <p><b>Waarom 4 uur?</b> Op dit punt in de curve ziet men de maximale daling van het HbA1c. Meer bewegen mag, maar de grootste winst behaalt u hier.</p>
@@ -225,7 +225,7 @@
                     <li><b>Duurtraining:</b> Werkt als een "stofzuiger" die vetten direct verbruikt voor energie.</li>
                     <li><b>Spieroefeningen:</b> Zorgen dat uw spieren vetten beter kunnen opslaan als een "opslagplaats".</li>
                 </ul>
-                <b>Het resultaat:</b> De "slechte" LDL-cholesterol daalt alleen significant als u beide combineert.
+                <b>Het resultaat:</b> De "slechte" LDL-cholesterol daalt alleen significant als u beide bcombineert.
             </div>
         </div>
     </div>
@@ -236,14 +236,14 @@
             <h2><i class="fas fa-file-pdf"></i> Originele Slides Index</h2>
             <p>Directe koppelingen naar de belangrijkste slides van <b>Prof. dr. Dominique Hansen</b>.</p>
             <div class="source-list">
-                <a href="javascript:void(0)" onclick="openPDF(1)" class="source-item"><span>Volledige presentatie (P. 1)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(3)" class="source-item"><span>Quiz: Voorspeller levensduur (P. 3)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(6)" class="source-item"><span>De VO2max-test (P. 6)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(7)" class="source-item"><span>Bewijs: Conditie vs Levensduur (P. 7)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(18)" class="source-item"><span>De 'Sweet Spot' voor suiker (P. 18)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(29)" class="source-item"><span>Cholesterol & Bloedvetten (P. 29)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(40)" class="source-item"><span>PROTECTION: Hart-revolutie (P. 40)</span><i class="fas fa-chevron-right"></i></a>
-                <a href="javascript:void(0)" onclick="openPDF(42)" class="source-item"><span>Diabetes en risico op dementie (P. 42)</span><i class="fas fa-chevron-right"></i></a>
+                <div onclick="openPDF(1)" class="source-item"><span>Volledige presentatie (P. 1)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(3)" class="source-item"><span>Quiz: Voorspeller levensduur (P. 3)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(6)" class="source-item"><span>De VO2max-test (P. 6)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(7)" class="source-item"><span>Bewijs: Conditie vs Levensduur (P. 7)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(18)" class="source-item"><span>De 'Sweet Spot' voor suiker (P. 18)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(29)" class="source-item"><span>Cholesterol & Bloedvetten (P. 29)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(40)" class="source-item"><span>PROTECTION: Hart-revolutie (P. 40)</span><i class="fas fa-chevron-right"></i></div>
+                <div onclick="openPDF(42)" class="source-item"><span>Diabetes en risico op dementie (P. 42)</span><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
     </div>
@@ -255,24 +255,20 @@
     <div class="footer-info"><b>Spreker:</b> Prof. dr. Dominique Hansen, UHasselt REVAL</div>
     <div class="footer-info"><b>Samenstelling:</b> Freddy Sleeuwaert, Bestuurslid DLML</div>
     <div class="disclaimer-box">
-        <i><b>Medisch Voorbehoud:</b> Samengesteld ter ondersteuning van de presentatie. Ik ben geen arts; raadpleeg bij medische vragen steeds uw diabetesteam.</i>
+        <i><b>Medisch Voorbehoud:</b> Deze samenvatting is onder voorbehoud samengesteld ter ondersteuning van de presentatie voor diegenen die dit nuttig vinden. Ik ben geen arts; raadpleeg bij medische vragen steeds uw diabetesteam.</i>
     </div>
 </footer>
 
 <script>
-    // Slimme functie om PDF te openen zonder download-prompt op gsm
     function openPDF(page) {
         var pdfUrl = "https://fredje4711.github.io/nieuwsbrief/Presentatie_Diabetes_en_Bewegen.pdf";
-        
-        // Check of we op een mobiel apparaat zitten
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         
         if (isMobile) {
-            // Gebruik Google Docs Viewer voor gsm (voorkomt download prompt)
-            // Let op: Paginanummering werkt niet in de Google viewer op gsm
-            window.open("https://docs.google.com/viewer?url=" + encodeURIComponent(pdfUrl) + "&embedded=true", "_blank");
+            // De Microsoft Office viewer vraagt meestal NIET om inloggen/accounts op Android
+            window.open("https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(pdfUrl), "_blank");
         } else {
-            // Op desktop: Directe link met paginanummer ondersteuning
+            // Op desktop blijft de directe link met paginanummering behouden
             window.open(pdfUrl + "#page=" + page, "_blank");
         }
     }
