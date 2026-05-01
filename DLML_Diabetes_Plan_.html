@@ -15,23 +15,17 @@
         }
 
         * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.5; font-size: 17px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background: var(--bg-light); color: var(--text-dark); line-height: 1.4; font-size: 17px; hyphens: auto; }
         
-        /* Navigatie: 5 knoppen compact voor gsm */
         .navbar { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; justify-content: center; }
-        .nav-btn { 
-            background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); 
-            padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; cursor: pointer; 
-            font-size: 0.78rem; flex: 1 1 30%; max-width: 31%; transition: 0.2s; 
-            -webkit-tap-highlight-color: transparent;
-        }
+        .nav-btn { background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; cursor: pointer; font-size: 0.82rem; flex: 1 1 30%; max-width: 31%; transition: 0.2s; -webkit-tap-highlight-color: transparent;}
         .nav-btn.active { background: var(--brand-blue); color: white; }
 
-        header { background: linear-gradient(135deg, var(--brand-blue) 0%, var(--dark-blue) 100%); color: white; padding: 10px 15px; text-align: center; }
+        header { background: linear-gradient(135deg, var(--brand-blue) 0%, var(--dark-blue) 100%); color: white; padding: 10px 10px; text-align: center; }
         header h1 { font-size: 1.35rem; margin: 0; font-weight: 800; }
-        header p { font-size: 1rem; margin: 2px 0 0 0; font-weight: 500; color: #f0f0f0; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 2px; display: inline-block; }
+        header p { font-size: 1rem; margin: 2px 0 0 0; font-weight: 500; color: #f0f0f0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2px; display: inline-block; }
 
-        .container { max-width: 100%; margin: 0 auto; padding: 10px; }
+        .container { max-width: 100%; margin: 0 auto; padding: 8px 8px 0 8px; }
         .page-section { display: none; }
         .page-section.active { display: block; }
 
@@ -41,25 +35,17 @@
         h3 { font-size: 1.1rem; color: var(--dark-blue); margin: 15px 0 8px 0; font-weight: 700; }
         
         p { margin: 0 0 12px 0; text-align: left; }
+        ul { margin: 0 0 12px 0; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
         .highlight { background: #eef9ff; padding: 12px; border-radius: 10px; border: 1px dashed var(--brand-blue); margin: 12px 0; font-size: 1rem; }
         
-        /* Knop voor pop-up slide */
         .slide-btn { 
-            display: inline-block; background: #f0f9ff; color: var(--dark-blue); 
-            border: 1.5px solid var(--brand-blue); padding: 6px 12px; border-radius: 20px;
+            display: inline-block; background: #eef9ff; color: var(--dark-blue); 
+            border: 1.5px solid var(--brand-blue); padding: 5px 12px; border-radius: 20px;
             font-size: 0.8rem; font-weight: bold; cursor: pointer; margin: 4px 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        .slide-btn i { color: #e74c3c; margin-right: 5px; }
-
-        /* De grote rode PDF knop */
-        .pdf-full-btn {
-            display: block; width: 100%; background: #e74c3c; color: white; 
-            text-align: center; padding: 20px; border-radius: 12px; 
-            text-decoration: none; font-weight: bold; font-size: 1.1rem;
-            margin: 20px 0; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-        }
-        .pdf-full-btn i { font-size: 1.8rem; margin-bottom: 8px; display: block; }
 
         /* MODAL / LIGHTBOX */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); text-align: center; overflow-y: auto; }
@@ -67,9 +53,22 @@
         .modal-content img { width: 100%; height: auto; border-radius: 8px; border: 2px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
         .close-modal { background: #e74c3c; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; margin: 15px 0 30px 0; cursor: pointer; font-size: 1rem; }
 
-        footer { background: #ffffff; color: #444; padding: 25px 20px; text-align: left; font-size: 0.85rem; border-top: 4px solid var(--brand-blue); margin-top: 20px; }
-        .footer-info { margin-bottom: 5px; }
-        .disclaimer-box { background: #f8f8f8; padding: 12px; border-radius: 8px; border: 1px solid #eee; margin-top: 15px; font-style: italic; font-size: 0.8rem; }
+        /* Grote PDF knop voor Sectie 5 */
+        .pdf-btn-main {
+            display: block; width: 100%; background: var(--brand-blue); color: white; 
+            text-align: center; padding: 18px; border-radius: 12px; 
+            text-decoration: none; font-weight: bold; font-size: 1.1rem;
+            margin: 15px 0; box-shadow: 0 4px 10px rgba(35, 169, 228, 0.3);
+        }
+
+        .comp-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.88rem; background: #fff; }
+        .comp-table th { background: var(--brand-blue); color: white; padding: 10px; text-align: left; }
+        .comp-table td { padding: 10px; border-bottom: 1px solid #eee; }
+        .table-cat { background: #f8f8f8; font-weight: bold; color: var(--dark-blue); }
+
+        footer { background: #ffffff; color: #222; padding: 8px 15px; text-align: left; font-size: 0.88rem; margin-top: 5px; border-top: 3.5px solid var(--brand-blue); }
+        .footer-info { margin-bottom: 2px; line-height: 1.25; }
+        .disclaimer-box { background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #eee; margin-top: 8px; font-style: italic; font-size: 0.82rem; }
 
         @media (min-width: 600px) { .nav-btn { flex: 0 1 auto; max-width: none; min-width: 140px;} .container { max-width: 750px; } }
     </style>
@@ -85,11 +84,11 @@
 </div>
 
 <div class="navbar">
-    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Fitheid is uw energetische reserve')">1. Basis</button>
+    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Fitheid is uw energetische reserve')">1. De Basis</button>
     <button class="nav-btn" onclick="switchTab(this, 'plan', 'Uw wetenschappelijk beweegrecept')">2. Plan</button>
-    <button class="nav-btn" onclick="switchTab(this, 'revolutie', 'Nieuwe hoop voor het hart')">3. Revolutie</button>
+    <button class="nav-btn" onclick="switchTab(this, 'revolutie', 'Nieuwe hoop voor het hart')">3. De Revolutie</button>
     <button class="nav-btn" onclick="switchTab(this, 'grafieken', 'De harde cijfers')">4. Bewijs</button>
-    <button class="nav-btn" onclick="switchTab(this, 'pdfpage', 'De originele presentatie')">5. Volledige PDF</button>
+    <button class="nav-btn" onclick="switchTab(this, 'bron', 'Originale presentatie index')">5. Slides</button>
 </div>
 
 <header>
@@ -144,27 +143,28 @@
             <p>De 'Sweet Spot' voor suikercontrole (HbA1c) ligt bij ± 4 uur per week.</p>
             <button onclick="openSlide('slides/slide18.jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk de 'Sweet Spot' (S. 18)</button>
             <h3 style="margin-top:20px;">Effect op Cholesterol</h3>
-            <button onclick="openSlide('slides/slide29.jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk Slide 29</button>
+            <button onclick="openSlide('slides/slide29.jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk Cholesterolwinst (S. 29)</button>
         </div>
     </div>
 
     <!-- SECTIE 5: VOLLEDIGE PDF PAGINA -->
-<div id="pdfpage" class="page-section">
-    <div class="card" style="border-left-color: #e74c3c;">
-        <h2><i class="fas fa-file-pdf"></i> De Originele Presentatie</h2>
-        <p>U kunt hier de volledige presentatie (46 slides) online bekijken zonder dat u het bestand op uw toestel hoeft op te slaan.</p>
-        
-        <!-- Deze link opent de PDF in de Google 'Streaming' Viewer -->
-        <a href="https://docs.google.com/viewer?url=https://fredje4711.github.io/nieuwsbrief/Presentatie_Diabetes_en_Bewegen.pdf&embedded=true" target="_blank" class="pdf-full-btn">
-            <i class="fas fa-eye"></i> Lees de volledige PDF online
-        </a>
+    <div id="bron" class="page-section">
+        <div class="card" style="border-left-color: #e74c3c;">
+            <h2><i class="fas fa-file-pdf"></i> Volledige Presentatie</h2>
+            <p>U kunt hier de volledige presentatie (46 slides) online doorbladeren zonder het bestand te downloaden.</p>
+            
+            <!-- Microsoft Viewer: Meestal betere schaling op gsm -->
+            <a href="https://view.officeapps.live.com/op/view.aspx?src=https://fredje4711.github.io/nieuwsbrief/Presentatie_Diabetes_en_Bewegen.pdf" target="_blank" class="pdf-btn-main">
+                <i class="fas fa-eye"></i> Bekijk volledige PDF (Gsm-vriendelijk)
+            </a>
 
-        <div class="highlight" style="font-size: 0.9rem;">
-            <b>Opmerking voor smartphone-gebruikers:</b><br>
-            Het kan zijn dat Google u vraagt met welk Gmail-account u wilt kijken. Dit is een standaard beveiliging van Android. U kunt gewoon uw account kiezen om de slides direct te lezen.
+            <div class="highlight" style="font-size: 0.85rem; border: none; background: #fdfdfd;">
+                <p><b>Gebruikstip:</b> Als het beeld toch te groot getoond wordt, kunt u met twee vingers uitzoomen om de hele slide te zien.</p>
+                <hr style="border:0; border-top:1px solid #eee;">
+                <p style="margin-top:5px; color:#888;">Alternatief: <a href="https://docs.google.com/viewer?url=https://fredje4711.github.io/nieuwsbrief/Presentatie_Diabetes_en_Bewegen.pdf&embedded=true" target="_blank" style="color:var(--brand-blue)">Open via Google Viewer</a></p>
+            </div>
         </div>
     </div>
-</div>
 
 </div>
 
