@@ -25,12 +25,17 @@
             hyphens: auto; 
         }
         
-        /* Navigatie: Compact met 5 knoppen */
+        /* Navigatie: Zeer compact */
         .navbar { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; justify-content: center; }
-        .nav-btn { background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; cursor: pointer; font-size: 0.82rem; flex: 1 1 30%; max-width: 31%; transition: 0.2s; -webkit-tap-highlight-color: transparent;}
+        .nav-btn { 
+            background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); 
+            padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; 
+            cursor: pointer; font-size: 0.82rem; flex: 1 1 30%; max-width: 31%; 
+            transition: 0.2s; -webkit-tap-highlight-color: transparent;
+        }
         .nav-btn.active { background: var(--brand-blue); color: white; }
 
-        /* Header: Zeer compact */
+        /* Header: Minimale witruimte */
         header { background: linear-gradient(135deg, var(--brand-blue) 0%, var(--dark-blue) 100%); color: white; padding: 10px 10px; text-align: center; }
         header h1 { font-size: 1.35rem; margin: 0; font-weight: 800; }
         header p { font-size: 1rem; margin: 2px 0 0 0; font-weight: 500; color: #f0f0f0; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 2px; display: inline-block; }
@@ -39,39 +44,42 @@
         .page-section { display: none; }
         .page-section.active { display: block; }
 
-        /* Cards */
-        .card { background: var(--white); border-radius: 12px; padding: 18px; margin-bottom: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.06); border-left: 6px solid var(--brand-blue); }
-        h2 { color: var(--brand-blue); font-size: 1.25rem; margin: 0 0 12px 0; display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+        /* Cards: Compactere paddings */
+        .card { background: var(--white); border-radius: 10px; padding: 15px; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 5px solid var(--brand-blue); }
+        h2 { color: var(--brand-blue); font-size: 1.2rem; margin: 0 0 8px 0; display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px; }
         h2 i { margin-right: 10px; }
-        h3 { font-size: 1.1rem; color: var(--dark-blue); margin: 15px 0 8px 0; font-weight: 700; }
+        h3 { font-size: 1.1rem; color: var(--dark-blue); margin: 12px 0 5px 0; font-weight: 700; }
         
-        p { margin: 0 0 12px 0; text-align: left; }
-        ul { margin: 0 0 12px 0; padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        p { margin: 0 0 10px 0; text-align: left; }
+        ul { margin: 0 0 10px 0; padding-left: 20px; }
+        li { margin-bottom: 4px; }
 
-        .highlight { background: #eef9ff; padding: 12px; border-radius: 10px; border: 1px dashed var(--brand-blue); margin: 12px 0; font-size: 1rem; }
+        .highlight { background: #eef9ff; padding: 10px; border-radius: 8px; border: 1px dashed var(--brand-blue); margin: 10px 0; font-size: 1rem; }
         
-        /* Slide knoppen */
-        .slide-btn { 
+        /* De interactieve PDF knoppen */
+        .slide-link { 
             display: inline-block; background: #eef9ff; color: var(--dark-blue); 
-            border: 1.5px solid var(--brand-blue); padding: 5px 12px; border-radius: 20px;
-            font-size: 0.8rem; font-weight: bold; cursor: pointer; margin: 4px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-decoration: none; font-size: 0.8rem; font-weight: bold; 
+            padding: 4px 10px; border-radius: 20px; border: 1.5px solid var(--brand-blue);
+            margin: 4px 2px; vertical-align: middle; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            cursor: pointer;
         }
-        .slide-btn i { color: #e74c3c; margin-right: 4px; }
+        .slide-link i { color: #e74c3c; margin-right: 4px; }
 
-        /* MODAL / LIGHTBOX */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); text-align: center; overflow-y: auto; }
-        .modal-content { position: relative; margin: 20px auto; padding: 10px; width: 95%; max-width: 900px; top: 50%; transform: translateY(-50%); }
-        .modal-content img { width: 100%; height: auto; border-radius: 8px; border: 2px solid white; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
-        .close-modal { background: #e74c3c; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; margin: 15px 0 30px 0; cursor: pointer; font-size: 1rem; }
+        /* Tabellen: Zeer compact */
+        .comp-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.85rem; background: #fff; }
+        .comp-table th { background: var(--brand-blue); color: white; padding: 8px; text-align: left; }
+        .comp-table td { padding: 8px; border-bottom: 1px solid #eee; vertical-align: top; color: #1a1a1a; }
+        .table-cat { background: #f8f8f8; font-weight: bold; color: var(--dark-blue); }
 
-        /* GALERIJ */
-        .full-gallery { background: #444; padding: 10px; border-radius: 8px; margin-top: 10px; }
+        .chart-svg { width: 100%; height: auto; background: white; margin: 8px 0; border: 1px solid #ddd; border-radius: 5px; }
+
+        /* Galerij voor tab 5 */
+        .full-gallery { background: #444; padding: 10px; border-radius: 8px; margin-top: 5px; }
         .full-gallery img { width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px; display: block; border: 1px solid #666; }
         .slide-label { color: #fff; font-size: 0.7rem; text-align: center; margin-bottom: 15px; display: block; opacity: 0.7; }
 
-        /* ZWEVENDE KNOP */
+        /* Zwevende knop */
         #floatingBackBtn {
             display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;
             background: var(--brand-blue); color: white; border: none; 
@@ -79,14 +87,11 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-size: 1.2rem;
         }
 
-        .comp-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.88rem; background: #fff; }
-        .comp-table th { background: var(--brand-blue); color: white; padding: 10px; text-align: left; }
-        .comp-table td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; color: #1a1a1a; }
-        .table-cat { background: #f8f8f8; font-weight: bold; color: var(--dark-blue); }
-
-        footer { background: #ffffff; color: #222; padding: 8px 15px; text-align: left; font-size: 0.88rem; margin-top: 5px; border-top: 3.5px solid var(--brand-blue); }
-        .footer-info { margin-bottom: 2px; line-height: 1.25; }
-        .disclaimer-box { background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #eee; margin-top: 8px; font-style: italic; font-size: 0.82rem; }
+        /* Footer: Zeer compact */
+        footer { background: #ffffff; color: #333; padding: 10px 15px; text-align: left; font-size: 0.85rem; border-top: 3.5px solid var(--brand-blue); margin-top: 10px; }
+        .footer-info { margin-bottom: 2px; line-height: 1.2; }
+        .footer-info b { color: #000; }
+        .disclaimer-box { background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #eee; margin-top: 8px; font-style: italic; font-size: 0.8rem; line-height: 1.3; }
 
         @media (min-width: 600px) { .nav-btn { flex: 0 1 auto; max-width: none; min-width: 130px;} .container { max-width: 750px; } }
     </style>
@@ -95,20 +100,12 @@
 
 <button id="floatingBackBtn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <img id="activeSlide" src="" alt="Slide vergroting">
-        <br>
-        <button class="close-modal" onclick="closeSlide()">[ X ] Terug naar de tekst</button>
-    </div>
-</div>
-
 <div class="navbar">
-    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Fitheid is uw energetische reserve')">1. De Basis</button>
+    <button class="nav-btn active" onclick="switchTab(this, 'basis', 'Fitheid is uw beste bescherming')">1. De Basis</button>
     <button class="nav-btn" onclick="switchTab(this, 'plan', 'Uw wetenschappelijk beweegrecept')">2. Plan</button>
     <button class="nav-btn" onclick="switchTab(this, 'revolutie', 'Nieuwe hoop voor het hart')">3. De Revolutie</button>
     <button class="nav-btn" onclick="switchTab(this, 'grafieken', 'De harde cijfers achter het succes')">4. Bewijs</button>
-    <button class="nav-btn" onclick="switchTab(this, 'bron', 'Alle presentatie slides')">5. Slides</button>
+    <button class="nav-btn" onclick="switchTab(this, 'bron', 'Originele presentatie slides')">5. Slides</button>
 </div>
 
 <header>
@@ -118,104 +115,101 @@
 
 <div class="container">
 
-    <!-- SECTIE 1: DE BASIS -->
+    <!-- SECTIE 1: DE BASIS (VOLLEDIGE TEKST) -->
     <div id="basis" class="page-section active">
         <div class="card">
-            <h2><i class="fas fa-microchip"></i> De Motor van uw Lichaam</h2>
-            <p>Prof. dr. Hansen stelt dat we beweging niet moeten zien als een 'extraatje', maar als de brandstof voor uw vitale reserve. De kernterm hier is <b>VO2max</b>.</p>
+            <h2><i class="fas fa-heartbeat"></i> Waarom bewegen?</h2>
+            <p>Veel diabeten focussen enkel op de weegschaal, maar de wetenschap vertelt een ander verhaal. Uw <b>conditie (VO2max)</b> is de motor van uw lichaam. Hoe sterker die motor, hoe beter uw organen beschermd zijn tegen de complicaties van diabetes. <button onclick="openPDF(3)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 3</button></p>
+            <p>Zelfs als u niet afvalt, zorgt een betere conditie ervoor dat u langer en gezonder leeft. Het verlaagt de ontstekingswaarden in uw bloed en verbetert de werking van uw bloedvaten. <button onclick="openPDF(6)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 6</button></p>
             
-            <div style="margin: 10px 0;">
-                <button onclick="openSlide('slides/slide (3).jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk Slide 3 (Theorie)</button>
-                <button onclick="openSlide('slides/slide (6).jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk Slide 6 (De Test)</button>
-            </div>
-
             <div class="highlight">
-                <b>Wat is VO2max precies?</b><br>
-                Het is de maximale hoeveelheid zuurstof die uw lichaam per minuut uit de lucht kan halen en naar uw spieren kan pompen. 
-                <ul>
-                    <li>Bij diabetespatiënten is deze 'motor' vaak kleiner door de ziekte.</li>
-                    <li>Een lage VO2max betekent dat uw organen minder reserve hebben om stress of ziekte op te vangen.</li>
-                    <li><b>De goede boodschap:</b> U kunt deze motor vergroten door <u>volume</u> (tijd) te investeren in beweging.</li>
-                </ul>
+                <b>De 3 Pijlers van succes:</b><br>
+                1. <b>Conditie > Gewicht:</b> Een fitte diabeet heeft een betere prognose dan een niet-fitte persoon zonder diabetes.<br>
+                2. <b>Tijd > Kracht:</b> Hoeveel minuten u per week beweegt is belangrijker dan hoe hard u buiten adem bent.<br>
+                3. <b>Spieronderhoud:</b> Spieren zijn de grootste verbruikers van suiker. Train ze met lichte gewichten voor maximaal effect.
             </div>
-
+        </div>
+        <div class="card">
+            <h2><i class="fas fa-brain"></i> Bescherming van uw brein</h2>
+            <p>Diabetes kan op lange termijn een impact hebben op het geheugen en de hersenstructuur. Prof. Hansen benadrukte het <b>SAINT-project</b>: regelmatige duurtraining helpt de neurochemie in de hersenen gezond te houden en verlaagt het risico op dementie aanzienlijk. <button onclick="openPDF(42)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 42</button></p>
+        </div>
+        <div class="card">
             <h3>Fitheid vs. Gewicht</h3>
-            <p>De wetenschap is glashelder: een persoon met overgewicht die <b>fit</b> is (hoge VO2max), heeft een lagere kans op vroegtijdig overlijden dan een slank persoon die <b>niet fit</b> is. Conditie biedt een fysiologische beschermlaag die belangrijker is dan het getal op de weegschaal.</p>
-            
-            <button onclick="openSlide('slides/slide (7).jpg')" class="slide-btn"><i class="fas fa-chart-line"></i> Bekijk Slide 7</button>
-            <button onclick="openSlide('slides/slide (8).jpg')" class="slide-btn"><i class="fas fa-search-plus"></i> Bekijk Slide 8</button>
+            <p>De wetenschap is glashelder: een persoon met overgewicht die <b>fit</b> is (hoge VO2max), heeft een lagere kans op vroegtijdig overlijden dan een slank persoon die <b>niet fit</b> is. Conditie biedt een fysiologische beschermlaag die belangrijker is dan het getal op de weegschaal. <button onclick="openPDF(7)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slides 7-8</button></p>
         </div>
     </div>
 
-    <!-- SECTIE 2: HET PLAN -->
+    <!-- SECTIE 2: HET PLAN (VOLLEDIGE TEKST) -->
     <div id="plan" class="page-section">
         <div class="card">
-            <h2><i class="fas fa-flask"></i> Fysiologisch Trainingsplan</h2>
-            <p>Om de suikerhuishouding en hartgezondheid te verbeteren, moeten we twee verschillende 'systemen' in uw lichaam aanspreken:</p>
+            <h2><i class="fas fa-walking"></i> Uw trainingsplan</h2>
+            <p>Beweging werkt als een medicijn: de dosering moet juist zijn. Voor diabeten en hartpatiënten is <b>volume (herhaling)</b> belangrijker dan het tillen van zware gewichten.</p>
             
             <table class="comp-table">
                 <thead>
-                    <tr><th>Systeem</th><th>Methode</th><th>Wat gebeurt er?</th></tr>
+                    <tr><th>Onderdeel</th><th>Wat te doen?</th><th>Nut</th></tr>
                 </thead>
                 <tbody>
-                    <tr class="table-cat"><td colspan="3">A. HET CARDIO-SYSTEEM (Uithouding)</td></tr>
-                    <tr><td><b>Doel</b></td><td>150-300 min/week. <button onclick="openSlide('slides/slide (12).jpg')" class="slide-btn" style="padding:2px 8px">Slide 12</button></td><td>Herstel van hart- en vaatwanden.</td></tr>
-                    <tr><td><b>Vorm</b></td><td>Fietsen, wandelen. <button onclick="openSlide('slides/slide (14).jpg')" class="slide-btn" style="padding:2px 8px">Slide 14</button></td><td>Verbetert de pompkracht.</td></tr>
+                    <tr class="table-cat"><td colspan="3">A. VOOR UW CONDITIE (Uithouding) <button onclick="openPDF(12)" class="slide-link" style="padding:2px 8px">S.12</button></td></tr>
+                    <tr><td><b>Duursport</b></td><td>Wandelen, fietsen, zwemmen.</td><td>Herstelt hartcellen.</td></tr>
+                    <tr><td><b>Tijd</b></td><td>150-300 min. per week.</td><td>Optimale 'dosis'.</td></tr>
                     
-                    <tr class="table-cat"><td colspan="3">B. HET SPIER-SYSTEEM (Kracht)</td></tr>
-                    <tr><td><b>Doel</b></td><td>8-10 oefeningen.</td><td>Spieren openen 'suikerpoorten'.</td></tr>
-                    <tr><td><b>Vorm</b></td><td>Lichte gewichten.</td><td>Veilig voor de bloeddruk.</td></tr>
-                    <tr><td><b>Dosis</b></td><td>>21 sets per sessie. <button onclick="openSlide('slides/slide (20).jpg')" class="slide-btn" style="padding:2px 8px">Slide 20</button></td><td>Noodzakelijk voor HbA1c daling.</td></tr>
+                    <tr class="table-cat"><td colspan="3">B. VOOR UW SPIEREN (Kracht) <button onclick="openPDF(14)" class="slide-link" style="padding:2px 8px">S.14</button></td></tr>
+                    <tr><td><b>Oefeningen</b></td><td>8-10 verschillende bewegingen.</td><td>Trekt suiker uit bloed.</td></tr>
+                    <tr><td><b>Gewicht</b></td><td>Aanvaardbaar (niet te zwaar).</td><td>Veilig voor hart.</td></tr>
+                    <tr><td><b>Herhaling</b></td><td>Elke oefening 15-20x herhalen.</td><td>Volume is de sleutel.</td></tr>
                 </tbody>
             </table>
 
-            <h3>Waarom de "21 sets" en "15 herhalingen"?</h3>
+            <p><b>De "21-sets" regel (Slide 20):</b> Uit de studie van Ishiguro blijkt dat de suikerwaarde (HbA1c) pas echt sterk daalt als u voldoende volume draait. Streef naar een totaal van <b>minstens 21 sets per training</b> (bijv. 7 verschillende oefeningen die u elk 3 keer herhaalt). <button onclick="openPDF(20)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 20</button></p>
+            
+            <div class="highlight">
+                <i class="fas fa-calendar-check"></i> <b>De 48-uurs regel:</b> Sla nooit meer dan 2 dagen achter elkaar over. Het positieve effect van beweging op uw suikergevoeligheid vervalt na ongeveer 48 uur.
+            </div>
             <p>Wanneer u een spier herhaaldelijk samentrekt met een matige belasting, worden er specifieke eiwitten (GLUT4) naar de oppervlakte van de spiercel gestuurd. Deze werken als <b>poortwachters</b> die suiker uit uw bloed trekken zonder dat daar extra insuline voor nodig is. Door veel herhalingen te doen (15-20x), houdt u deze poorten langer open.</p>
         </div>
     </div>
 
-    <!-- SECTIE 3: DE REVOLUTIE -->
+    <!-- SECTIE 3: DE REVOLUTIE (VOLLEDIGE TEKST) -->
     <div id="revolutie" class="page-section">
         <div class="card" style="border-left-color: #f1c40f;">
-            <h2><i class="fas fa-heartbeat"></i> PROTECTION: Een Medische Kanteling</h2>
-            <p>Dit is het meest verrassende deel van de presentatie. Prof. dr. Hansen presenteerde data uit het <b>PROTECTION-project</b> die de huidige sportadviezen op hun kop zet. <button onclick="openSlide('slides/slide (40).jpg')" class="slide-btn">Bekijk Slide 40</button></p>
-            
-            <h3>Volume is de 'Healer', niet Intensiteit</h3>
-            <p>Decennialang werd gedacht: "Je moet hard trainen (hoge intensiteit) om je hart sterker te maken." Bij diabetespatiënten blijkt dit niet te kloppen voor de directe bescherming van de hartspier.</p>
+            <h2><i class="fas fa-microscope"></i> Wetenschappelijke Primeur</h2>
+            <p>Het <b>PROTECTION-project</b> brengt een inzicht dat haaks staat op oude opvattingen. Voor het herstel van de hartspier bij diabeten is de traditionele "intensieve" training minder belangrijk dan we dachten. <button onclick="openPDF(40)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 40</button></p>
             <div class="highlight">
-                <b>De ontdekking:</b>
-                <ul>
-                    <li><b>Intensiteit (Stress):</b> Hard sporten verbetert wel uw conditie, maar het <u>herstelt</u> de hartcellen die beschadigd zijn door suiker niet direct. Voor een kwetsbaar hart kan te hoge intensiteit zelfs voor extra stress zorgen.</li>
-                    <li><b>Volume (Tijd):</b> De <u>totale tijd</u> dat u beweegt op een matig tempo stimuleert de hartcellen om hun interne energiecentrales (mitochondriën) te repareren.</li>
-                </ul>
+                <b>Wat is het verschil?</b><br><br>
+                <b>Intensiteit:</b> Hoe hard uw hart slaat. Dit is goed voor uw uithoudingsvermogen, maar herstelt de hartcel niet direct. Voor een kwetsbaar hart kan te hoge intensiteit zelfs voor extra stress zorgen.<br><br>
+                <b>Volume (Tijd):</b> De totale tijd dat u beweegt. Dit is de <u>sleutel</u>. Hoe langer u beweegt op een matig tempo (wandelen, rustig fietsen), hoe meer kans de hartspier krijgt om de eigen energiecentrales (mitochondriën) op celniveau te herstellen.
             </div>
-            <h3>Wat betekent dit voor u?</h3>
-            <p>De revolutie is dat we nu weten dat <b>60 minuten rustig bewegen</b> superieur is aan 15 minuten intensief sporten als het gaat om het voorkomen van hartfalen bij diabetes. Dit inzicht zal pas rond 2026 officieel in de medische handboeken landen. U heeft nu dus een wetenschappelijke voorsprong.</p>
+            <p><b>De les:</b> Voel u niet schuldig als u niet kunt hardlopen. Een lange, stevige wandeling van 60 minuten is voor uw hartcellen veel waardevoller dan een korte, uitputtende inspanning. Dit inzicht zal pas rond 2026 officieel in de medische handboeken landen. U heeft nu dus een wetenschappelijke voorsprong.</p>
         </div>
     </div>
 
-    <!-- SECTIE 4: HET BEWIJS -->
+    <!-- SECTIE 4: HET BEWIJS (VOLLEDIGE TEKST) -->
     <div id="grafieken" class="page-section">
         <div class="card">
-            <h2><i class="fas fa-chart-line"></i> Wetenschappelijke Fundamenten</h2>
+            <h2><i class="fas fa-chart-line"></i> Bewijs uit de praktijk</h2>
             
-            <h3>1. De Gigantische Studie: Mandsager (2018)</h3>
-            <p>Deze grafiek (Slide 7) is gebaseerd op maar liefst <b>122.007 patiënten</b> die 10 jaar lang gevolgd zijn. Dit is een van de grootste studies ooit naar fitheid. <button onclick="openSlide('slides/slide (7).jpg')" class="slide-btn">Slide 7</button></p>
-            <p><b>Conclusie:</b> De daling van de rode lijn laat zien hoe gevaarlijk een lage fitheid is. Beweging is letterlijk een levensverlengend medicijn.</p>
+            <h3>1. Conditie verlengt de gezonde jaren</h3>
+            <p>Deze grafiek is gebaseerd op maar liefst <b>122.007 patiënten</b> die 10 jaar lang gevolgd zijn. Het toont aan dat mensen met een hoge fitheid (groen) een veel gunstigere levensverwachting hebben dan mensen met een lage fitheid (rood). Uw conditie verbeteren is de krachtigste manier om complicaties te voorkomen. <button onclick="openPDF(7)" class="slide-link"><i class="fas fa-file-pdf"></i> Bekijk Slide 7</button></p>
+            <svg viewBox="0 0 400 180" class="chart-svg">
+                <line x1="40" y1="10" x2="40" y2="160" stroke="#333" stroke-width="2"/>
+                <line x1="40" y1="160" x2="380" y2="160" stroke="#333" stroke-width="2"/>
+                <path d="M40 30 Q 200 35 380 40" fill="none" stroke="#2ecc71" stroke-width="4" /> 
+                <path d="M40 30 Q 180 80 380 150" fill="none" stroke="#e74c3c" stroke-width="4" />
+                <text x="50" y="25" font-size="13" fill="#2ecc71" font-weight="bold">Optimale levensverwachting (Fit)</text>
+                <text x="50" y="140" font-size="13" fill="#e74c3c" font-weight="bold">Verhoogd risico (Niet fit)</text>
+            </svg>
 
-            <h3>2. De Meta-Analyse: Gallardo-Gómez (2024)</h3>
-            <p>Voor de 'Sweet Spot' van 4 uur per week (Slide 18) keek men naar <b>126 verschillende studies</b> met in totaal <b>6.718 diabetespatiënten</b>. <button onclick="openSlide('slides/slide (18).jpg')" class="slide-btn">Slide 18</button></p>
-            <p><b>Waarom 4 uur?</b> Op dit punt in de curve ziet men de maximale daling van het HbA1c (de gemiddelde suikerwaarde). Meer bewegen mag, maar de grootste winst voor uw gezondheid behaalt u op dit punt.</p>
+            <h3>2. De ideale 'dosis' voor uw suiker</h3>
+            <p>Uit nieuw onderzoek (Gallardo-Gómez 2024, gebaseerd op 126 studies bij 6.718 diabetespatiënten) blijkt dat uw suikerspiegel (HbA1c) het meest daalt bij een beweegvolume van ongeveer 4 uur per week. Dit is de "Sweet Spot". Op dit punt in de curve ziet men de maximale daling; meer bewegen mag, maar de grootste winst is dan al behaald. <button onclick="openPDF(18)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 18</button></p>
+            <svg viewBox="0 0 400 120" class="chart-svg">
+                <path d="M40 20 C 80 100, 320 100, 380 30" fill="none" stroke="var(--brand-blue)" stroke-width="4" />
+                <circle cx="210" cy="85" r="8" fill="red" />
+                <text x="130" y="110" font-size="14" font-weight="bold">Beste resultaat bij ± 4u per week</text>
+            </svg>
 
-            <h3>3. Cholesterol & Vetten (Slide 29)</h3>
-            <p>Onderzoek bij <b>5.273 sporters</b> toont aan waarom de combinatie van conditie en spieroefeningen essentieel is: <button onclick="openSlide('slides/slide (29).jpg')" class="slide-btn">Slide 29</button></p>
-            <div class="highlight">
-                <ul>
-                    <li><b>Duurtraining (Wandelen/Fietsen):</b> Werkt als een "stofzuiger" die vetten (Triglyceriden) direct uit het bloed verbruikt voor energie.</li>
-                    <li><b>Spieroefeningen:</b> Zorgen dat uw spieren gevoeliger worden en vetten beter kunnen opslaan als een "opslagplaats", waardoor ze niet in het bloed blijven plakken.</li>
-                </ul>
-                <b>Het resultaat:</b> De "slechte" LDL-cholesterol daalt alleen significant als u beide vormen combineert.
-            </div>
+            <h3>3. Cholesterol & Bloedvetten</h3>
+            <p>Onderzoek bij 5.273 sporters toont aan waarom de combinatie van conditie en spieroefeningen essentieel is: Wandelen werkt als een "stofzuiger" die vetten (Triglyceriden) uit het bloed haalt voor energie. Krachttraining zorgt ervoor dat uw spieren gevoeliger worden en vetten beter kunnen opslaan als een "opslagplaats", waardoor ze niet in het bloed blijven plakken. Alleen door <b>beide</b> te combineren, ziet u de beste daling in uw "slechte" LDL-cholesterol. <button onclick="openPDF(29)" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 29</button></p>
         </div>
     </div>
 
@@ -223,53 +217,50 @@
     <div id="bron" class="page-section">
         <div class="card">
             <h2><i class="fas fa-images"></i> Alle presentatie slides</h2>
-            <p>U kunt hieronder door de volledige presentatie bladeren (46 slides).</p>
+            <p>U kunt hieronder door de volledige presentatie bladeren (46 slides) zonder deze te downloaden.</p>
             <div id="fullGallery" class="full-gallery">
-                <!-- Hier worden de 46 slides automatisch geladen door het script -->
+                <!-- Wordt geladen door JS -->
             </div>
         </div>
     </div>
-
 </div>
 
 <footer>
     <div class="footer-info"><b>Organisatie:</b> Diabetes Liga Midden-Limburg (DLML)</div>
+    <div class="footer-info"><b>Infosessie:</b> "Diabetes en bewegen" (2024)</div>
     <div class="footer-info"><b>Spreker:</b> Prof. dr. Dominique Hansen, UHasselt REVAL</div>
     <div class="footer-info"><b>Samenstelling:</b> Freddy Sleeuwaert, Bestuurslid DLML</div>
     <div class="disclaimer-box">
-        <i><b>Medisch Voorbehoud:</b> Samengesteld ter ondersteuning van de presentatie. Ik ben geen arts; raadpleeg bij medische vragen steeds uw diabetesteam.</i>
+        <i><b>Medisch Voorbehoud:</b> Deze samenvatting is door mij onder voorbehoud samengesteld ter ondersteuning van de presentatie voor diegenen die dit nuttig vinden of kunnen gebruiken. Ik ben geen arts; dit overzicht is enkel een hulpmiddel. Raadpleeg bij medische vragen of wijzigingen in uw beweegpatroon steeds uw behandelend arts of diabetesteam.</i>
     </div>
 </footer>
 
 <script>
-    // 1. Genereer de 46 slides in de galerij
+    // 1. Genereer galerij
     const gallery = document.getElementById('fullGallery');
     for (let i = 1; i <= 46; i++) {
         const img = document.createElement('img');
         img.src = `slides/slide (${i}).jpg`; 
         img.loading = "lazy"; 
-        
         const label = document.createElement('span');
         label.className = 'slide-label';
         label.innerText = `Slide ${i} van 46`;
-        
         gallery.appendChild(img);
         gallery.appendChild(label);
     }
 
-    // 2. Pop-up functies
-    function openSlide(imgUrl) {
-        document.getElementById('activeSlide').src = imgUrl;
-        document.getElementById('myModal').style.display = "block";
-        document.body.style.overflow = "hidden"; 
+    // 2. PDF Open functie
+    function openPDF(page) {
+        var pdfUrl = "https://fredje4711.github.io/nieuwsbrief/Presentatie_Diabetes_en_Bewegen.pdf";
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.open("https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(pdfUrl), "_blank");
+        } else {
+            window.open(pdfUrl + "#page=" + page, "_blank");
+        }
     }
 
-    function closeSlide() {
-        document.getElementById('myModal').style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-
-    // 3. Zwevende knop functies
+    // 3. Scroll & Nav
     window.onscroll = function() {
         let btn = document.getElementById("floatingBackBtn");
         if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
@@ -278,12 +269,8 @@
             btn.style.display = "none";
         }
     };
+    function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 
-    function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-
-    // 4. Navigatie
     function switchTab(btn, tabId, subTitleText) {
         var sections = document.querySelectorAll('.page-section');
         for (var i = 0; i < sections.length; i++) {
@@ -293,9 +280,7 @@
         document.getElementById(tabId).style.display = 'block';
         document.getElementById(tabId).classList.add('active');
         var buttons = document.querySelectorAll('.nav-btn');
-        for (var j = 0; j < buttons.length; j++) {
-            buttons[j].classList.remove('active');
-        }
+        for (var j = 0; j < buttons.length; j++) { buttons[j].classList.remove('active'); }
         btn.classList.add('active');
         document.getElementById('subTitle').innerText = subTitleText;
         window.scrollTo({top: 0, behavior: 'smooth'});
