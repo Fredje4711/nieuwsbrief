@@ -28,8 +28,7 @@
         /* Navigatie: Compact met 5 knoppen */
         .navbar { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; justify-content: center; }
         .nav-btn { 
-            background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); 
-            padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; 
+            background: none; border: 1.5px solid var(--brand-blue); color: var(--brand-blue); padding: 8px 6px; margin: 2px; border-radius: 15px; font-weight: bold; 
             cursor: pointer; font-size: 0.82rem; flex: 1 1 30%; max-width: 31%; transition: 0.2s; -webkit-tap-highlight-color: transparent;
         }
         .nav-btn.active { background: var(--brand-blue); color: white; }
@@ -60,7 +59,7 @@
         .slide-link { 
             display: inline-block; background: #eef9ff; color: var(--dark-blue); 
             text-decoration: none; font-size: 0.8rem; font-weight: bold; 
-            padding: 4px 10px; border-radius: 20px; border: 1.5px solid var(--brand-blue);
+            padding: 5px 12px; border-radius: 20px; border: 1.5px solid var(--brand-blue);
             margin: 4px 2px; vertical-align: middle; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             cursor: pointer;
         }
@@ -79,12 +78,10 @@
 
         .chart-svg { width: 100%; height: auto; background: white; margin: 15px 0; border: 1px solid #ddd; border-radius: 8px; }
 
-        /* Galerij voor tab 5 */
         .full-gallery { background: #444; padding: 10px; border-radius: 8px; margin-top: 10px; }
         .full-gallery img { width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px; display: block; border: 1px solid #666; }
         .slide-label { color: #fff; font-size: 0.7rem; text-align: center; margin-bottom: 15px; display: block; opacity: 0.7; }
 
-        /* Zwevende knop */
         #floatingBackBtn {
             display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;
             background: var(--brand-blue); color: white; border: none; 
@@ -98,7 +95,7 @@
         .disclaimer-box { background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #eee; margin-top: 8px; }
         .disclaimer-box i { color: #333; font-size: 0.82rem; display: block; line-height: 1.4; font-style: italic; }
 
-        @media (min-width: 600px) { .nav-btn { flex: 0 1 auto; max-width: none; min-width: 140px;} .container { max-width: 750px; } }
+        @media (min-width: 600px) { .nav-btn { flex: 0 1 auto; max-width: none; min-width: 130px;} .container { max-width: 750px; } }
     </style>
 </head>
 <body>
@@ -138,8 +135,8 @@
                 <b>Wat is VO2max precies?</b><br>
                 Fysiologisch gezien staat VO2max voor het maximale volume (V) aan zuurstof (O2) dat uw lichaam per minuut uit de lucht kan halen, via het hart naar de spieren kan pompen en daar ook effectief kan gebruiken. 
                 <ul>
-                    <li>Bij diabetes is deze motor vaak 'kleiner' door schade aan bloedvaten en cellen. <button onclick="openSlide('slides/slide3_6.jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 3</button></li>
-                    <li><b>De test:</b> Men meet dit via een inspanningstest met een masker (CPET). <button onclick="openSlide('slides/slide3_6.jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 6</button></li>
+                    <li>Bij diabetes is deze motor vaak 'kleiner' door schade aan bloedvaten en cellen. <button onclick="openSlide('slides/slide (3).jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 3</button></li>
+                    <li><b>De test:</b> Men meet dit via een inspanningstest met een masker (CPET). <button onclick="openSlide('slides/slide (6).jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 6</button></li>
                 </ul>
             </div>
 
@@ -164,10 +161,10 @@
             <table class="comp-table">
                 <thead><tr><th>Systeem</th><th>Methode</th><th>Wat gebeurt er?</th></tr></thead>
                 <tbody>
-                    <tr class="table-cat"><td colspan="3">A. HET CARDIO-SYSTEEM (Uithouding) <button onclick="openSlide('slides/slide12_14.jpg')" class="slide-link" style="padding:2px 8px">S.12</button></td></tr>
+                    <tr class="table-cat"><td colspan="3">A. HET CARDIO-SYSTEEM (Uithouding) <button onclick="openSlide('slides/slide (12).jpg')" class="slide-link" style="padding:2px 8px"><i class="fas fa-search-plus"></i> Zie Slide 12</button></td></tr>
                     <tr><td><b>Doel</b></td><td>150-300 min/week.</td><td>Herstel van hart- en vaatwanden.</td></tr>
                     <tr><td><b>Vorm</b></td><td>Fietsen, wandelen.</td><td>Verbetert de pompkracht.</td></tr>
-                    <tr class="table-cat"><td colspan="3">B. HET SPIER-SYSTEEM (Kracht) <button onclick="openSlide('slides/slide12_14.jpg')" class="slide-link" style="padding:2px 8px">S.14</button></td></tr>
+                    <tr class="table-cat"><td colspan="3">B. HET SPIER-SYSTEEM (Kracht) <button onclick="openSlide('slides/slide (14).jpg')" class="slide-link" style="padding:2px 8px"><i class="fas fa-search-plus"></i> Zie Slide 14</button></td></tr>
                     <tr><td><b>Doel</b></td><td>8-10 oefeningen.</td><td>Spieren openen 'suikerpoorten'.</td></tr>
                     <tr><td><b>Vorm</b></td><td>Aanvaardbare gewichten.</td><td>Veilig voor de bloeddruk.</td></tr>
                     <tr><td><b>Herhaling</b></td><td>Elke oefening 15-20x herhalen.</td><td>Volume is de sleutel.</td></tr>
@@ -175,10 +172,10 @@
             </table>
 
             <h3>Waarom de "21 sets" en "15 herhalingen"?</h3>
-            <p>Wanneer u een spier herhaaldelijk samentrekt (bijv. 15-20x) met een matige belasting, worden er specifieke eiwitten (<b>GLUT4</b>) naar de oppervlakte van de spiercel gestuurd. Deze werken als <b>poortwachters</b> die suiker uit uw bloed trekken zonder dat daar extra insuline voor nodig is. <button onclick="openSlide('slides/slide20.jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 20</button></p>
+            <p>Wanneer u een spier herhaaldelijk samentrekt (bijv. 15-20x) met een matige belasting, worden er specifieke eiwitten (<b>GLUT4</b>) naar de oppervlakte van de spiercel gestuurd. Deze werken als <b>poortwachters</b> die suiker uit uw bloed trekken zonder dat daar extra insuline voor nodig is. <button onclick="openSlide('slides/slide (20).jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 20</button></p>
             
             <div class="highlight">
-                <i class="fas fa-calendar-check"></i> <b>De 48-uurs regel:</b> Sla nooit meer dan 2 dagen achter elkaar over. Het positieve effect van beweging op uw suikergevoeligheid vervalt na ongeveer 48 uur.
+                <i class="fas fa-calendar-check"></i> <b>De 48-uurs regel:</b> Sla nooit meer dan 2 dagen over. Het positieve effect van beweging op uw suikergevoeligheid vervalt na ongeveer 48 uur.
             </div>
         </div>
     </div>
@@ -187,11 +184,11 @@
     <div id="revolutie" class="page-section">
         <div class="card" style="border-left-color: #f1c40f;">
             <h2><i class="fas fa-heartbeat"></i> PROTECTION: Een Medische Kanteling</h2>
-            <p>Het <b>PROTECTION-project</b> brengt een inzicht dat haaks staat op oude opvattingen. Voor het herstel van de hartspier bij diabeten is de traditionele "intensieve" training minder belangrijk dan we dachten. <button onclick="openSlide('slides/slide40.jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 40</button></p>
+            <p>Het <b>PROTECTION-project</b> brengt een inzicht dat haaks staat op oude opvattingen. Voor het herstel van de hartspier bij diabeten is de traditionele "intensieve" training minder belangrijk dan we dachten. <button onclick="openSlide('slides/slide (40).jpg')" class="slide-link"><i class="fas fa-search-plus"></i> Zie Slide 40</button></p>
             <div class="highlight">
                 <b>Volume is de 'Healer', niet Intensiteit</b>
                 <ul>
-                    <li><b>Intensiteit:</b> Hoe hard uw hart slaat. Dit is goed voor uw uithoudingsvermogen, maar herstelt de hartcel niet direct. Voor een kwetsbaar hart kan te hoge intensiteit zelfs voor extra stress zorgen.</li>
+                    <li><b>Intensiteit:</b> Hoe hard uw hart slaat. Dit is goed voor uw uithoudingsvermogen, maar herstelt de hartcel niet direct. Voor een kwetsbaar hart kan te hoge intensiteit zelfs voor extra stress zorgen.<br><br></li>
                     <li><b>Volume (Tijd):</b> De totale tijd dat u beweegt. Dit is de <u>sleutel</u>. Hoe langer u beweegt op een matig tempo (wandelen, rustig fietsen), hoe meer kans de hartspier krijgt om de eigen energiecentrales (<b>mitochondriën</b>) op celniveau te herstellen.</li>
                 </ul>
             </div>
@@ -199,10 +196,10 @@
         </div>
     </div>
 
-    <!-- SECTIE 4: HET BEWIJS -->
+    <!-- SECTIE 4: HET BEWIJS (HERSTELD & UITGEBREID) -->
     <div id="grafieken" class="page-section">
         <div class="card">
-            <h2><i class="fas fa-chart-line"></i> Wetenschappelijke Fundamenten</h2>
+            <h2><i class="fas fa-chart-line"></i> Bewijs uit de praktijk</h2>
             
             <h3>1. Conditie verlengt de gezonde jaren</h3>
             <p>Deze grafiek is gebaseerd op maar liefst <b>122.007 patiënten</b> die 10 jaar lang gevolgd zijn (Mandsager et al. 2018). Het toont aan dat mensen met een hoge fitheid (groen) een veel gunstigere levensverwachting hebben dan mensen met een lage fitheid (rood). <button onclick="openSlide('slides/slide7_8.jpg')" class="slide-link"><i class="fas fa-file-pdf"></i> Bekijk Grafiek & Cijfers</button></p>
@@ -217,7 +214,7 @@
             <p><b>De conclusie:</b> Uw conditie verbeteren is de krachtigste manier om complicaties te voorkomen. Fit zijn biedt een fysiologische beschermlaag die belangrijker is dan enkel het getal op de weegschaal.</p>
 
             <h3>2. De ideale 'dosis' voor uw suiker</h3>
-            <p>Uit een enorme meta-analyse (Gallardo-Gómez 2024, gebaseerd op 126 studies bij 6.718 patiënten) blijkt dat uw suikerspiegel (HbA1c) het meest daalt bij een beweegvolume van ongeveer 4 uur per week. <button onclick="openSlide('slides/slide (18).jpg')" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 18</button></p>
+            <p>Uit een enorme meta-analyse (Gallardo-Gómez 2024, gebaseerd op 126 studies bij 6.718 diabetespatiënten) blijkt dat uw suikerspiegel (HbA1c) het meest daalt bij een beweegvolume van ongeveer 4 uur per week. <button onclick="openSlide('slides/slide (18).jpg')" class="slide-link"><i class="fas fa-file-pdf"></i> Zie Slide 18</button></p>
             <svg viewBox="0 0 400 120" class="chart-svg">
                 <path d="M40 20 C 80 100, 320 100, 380 30" fill="none" stroke="var(--brand-blue)" stroke-width="4" />
                 <circle cx="210" cy="85" r="8" fill="red" />
@@ -249,11 +246,10 @@
 
 <footer>
     <div class="footer-info"><b>Organisatie:</b> Diabetes Liga Midden-Limburg (DLML)</div>
-    <div class="footer-info"><b>Infosessie:</b> "Diabetes en bewegen" (2024)</div>
-    <div class="footer-info"><b>Spreker:</b> Prof. dr. Dominique Hansen, UHasselt REVAL</div>
+    <div class="footer-info"><b>Infosessie:</b> "Diabetes en bewegen" (2024)<br><b>Spreker:</b> Prof. dr. Dominique Hansen, UHasselt REVAL</div>
     <div class="footer-info"><b>Samenstelling:</b> Freddy Sleeuwaert, Bestuurslid DLML</div>
     <div class="disclaimer-box">
-        <i><b>Medisch Voorbehoud:</b> Deze samenvatting is door mij onder voorbehoud samengesteld ter ondersteuning van de presentatie voor diegenen die dit nuttig vinden of kunnen gebruiken. Ik ben geen arts; raadpleeg bij medische vragen steeds uw diabetesteam of behandelend arts.</i>
+        <i><b>Medisch Voorbehoud:</b> Deze samenvatting is door mij onder voorbehoud samengesteld ter ondersteuning van de presentatie voor diegenen die dit nuttig vinden of kunnen gebruiken. Ik ben geen arts; raadpleeg bij medische vragen of wijzigingen in uw beweegpatroon steeds uw behandelend arts of diabetesteam.</i>
     </div>
 </footer>
 
