@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Lijn SMS</title>
+    <style>
+        body {
+            font-family: -apple-system, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 10px;
+            color: #222;
+        }
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: #0054a6;
+            margin: 10px 0 15px 0;
+            font-weight: bold;
+        }
+        .row {
+            background: white;
+            border-radius: 10px;
+            padding: 16px 14px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding-right: 10px;
+        }
+        .type {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .meta {
+            font-size: 16px;
+            color: #444;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        .btn {
+            background: #0054a6;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn.day {
+            background: #ffcc00;
+            color: #222;
+        }
+        .rules {
+            background: #fff9e6;
+            border: 1.5px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 15px;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+        .rules ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .rules li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">🚌 De Lijn SMS-Tickets</div>
+
+    <!-- 1 RIT -->
+    <div class="row">
+        <div class="info">
+            <span class="type">1 Rit (1 uur)</span>
+            <span class="meta">Naar 4884 • € 3,25</span>
+        </div>
+        <a href="sms:4884?body=DL" class="btn">Sms DL</a>
+    </div>
+
+    <!-- DAGTICKET -->
+    <div class="row">
+        <div class="info">
+            <span class="type">Dagticket (24u)</span>
+            <span class="meta">Naar 4884 • € 9,25</span>
+        </div>
+        <a href="sms:4884?body=DLD" class="btn day">Sms DLD</a>
+    </div>
+
+    <!-- REGELS -->
+    <div class="rules">
+        <ul>
+            <li>Sms <strong>vlak voor</strong> het instappen.</li>
+            <li>Wacht op de <strong>bevestigings-sms</strong> voor u opstapt.</li>
+            <li>Kies altijd <strong>Toestaan/Verzenden</strong> bij de waarschuwing.</li>
+            <li>Bij 1 rit: binnen het uur <strong>weer van de bus af zijn</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
