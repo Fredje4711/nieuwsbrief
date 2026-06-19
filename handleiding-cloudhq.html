@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass: cloudHQ & MailKing</title>
+    <style>
+        :root {
+            --primary-blue: #23A9E4;
+            --dark-blue: #1a7fb1;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --accent-purple: #9c27b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigatie & Knoppen */
+        .nav-bar {
+            background: var(--white);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-toggle {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-toggle:hover { background-color: var(--dark-blue); }
+
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 { margin: 0; font-size: 1.8em; }
+        header p { margin: 2px 0 0 0; font-size: 0.9em; }
+
+        .container {
+            max-width: 900px;
+            margin: 10px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+        }
+
+        h2 { color: var(--primary-blue); border-bottom: 2px solid var(--bg-light); padding-bottom: 5px; margin: 0 0 10px 0; }
+        h3 { color: var(--dark-blue); margin: 10px 0 5px 0; }
+
+        .step { display: flex; align-items: flex-start; margin-bottom: 8px; }
+        .step-number {
+            background: var(--primary-blue); color: var(--white);
+            width: 25px; height: 25px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            margin-right: 12px; flex-shrink: 0; font-weight: bold; font-size: 0.9em;
+        }
+
+        .badge { display: inline-block; background: #e1f5fe; color: var(--dark-blue); padding: 2px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; margin-bottom: 5px; }
+        .warning { background: #fff3e0; border-left: 5px solid #ff9800; padding: 10px; margin: 10px 0; border-radius: 6px; }
+        .ai-box { background: #f3e5f5; border-left: 5px solid var(--accent-purple); padding: 10px; margin: 10px 0; border-radius: 6px; }
+        .check-box-list { background: #e8f5e9; border: 1px solid #c8e6c9; padding: 10px; border-radius: 6px; }
+
+        /* Compacte Versie Specifiek */
+        .compact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .compact-card { background: #e3f2fd; padding: 10px; border-radius: 6px; border: 1px solid var(--primary-blue); }
+        .compact-card h4 { margin: 0 0 5px 0; color: var(--dark-blue); }
+
+        footer { text-align: center; padding: 20px; color: #888; font-size: 0.85em; }
+        ul { padding-left: 20px; margin: 5px 0; }
+        li { margin-bottom: 4px; }
+
+        .hidden { display: none; }
+
+        @media (max-width: 600px) { .compact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <button id="toggleBtn" class="btn-toggle" onclick="toggleVersion()">Naar Snelgids (Compact)</button>
+</div>
+
+<header>
+    <h1 id="headerTitle">📋 Handleiding: Nieuwsbrieven in Gmail</h1>
+    <p id="headerSub">Professioneel verzenden met cloudHQ & MailKing</p>
+</header>
+
+<div class="container">
+
+    <!-- ================= VOLLEDIGE VERSIE ================= -->
+    <div id="fullVersion">
+        <section class="card">
+            <h2>1. De Standaard cloudHQ Extensie</h2>
+            <p>Ideaal voor kleine groepen of individuen.</p>
+            <div class="step"><div class="step-number">1</div><div><strong>Installatie:</strong> Chrome Web Store > "cloudHQ".</div></div>
+            <div class="step"><div class="step-number">2</div><div><strong>Gebruik:</strong> 'Opstellen' > cloudHQ icoon > <strong>"Edit as HTML"</strong> > <strong>"Source"</strong>. Plak uw HTML in de editor en verzend.</div></div>
+            <div class="warning"><strong>Let op:</strong> Gebruik BCC voor privacy.</div>
+        </section>
+
+        <section class="card">
+            <span class="badge">Aanbevolen voor 50+ adressen</span>
+            <h2>2. MailKing: Massamailing & Statistieken</h2>
+            <h3>Stap A: Google Sheet Voorbereiding</h3>
+            <ul>
+                <li>Geef de Google Sheet een treffende naam.</li>
+                <li><strong>Kolom A:</strong> Voornaam | <strong>Kolom B:</strong> Email.</li>
+                <li><strong>Landinstelling:</strong> Bestand > Instellingen > <strong>Verenigde Staten</strong>.</li>
+                <li><strong>Tijdzone:</strong> (GMT+01:00) Brussels.</li>
+            </ul>
+            <h3>Stap B: Campagne Starten</h3>
+            <div class="step"><div class="step-number">1</div><div>Gmail > <strong>Campaigns</strong> > New Campaign > Import Sheet.</div></div>
+            <div class="step"><div class="step-number">2</div><div><strong>Onderwerp:</strong> Eindig op een <strong>letter</strong>. Vermijd "Test".</div></div>
+        </section>
+
+        <section class="card">
+            <h2>3. Het Ontwerp & Juiste Volgorde</h2>
+            <div class="step"><div class="step-number">1</div><div>Kies <strong>"Blank Template"</strong>.</div></div>
+            <div class="step"><div class="step-number">2</div><div>Klik op <strong>"Body"</strong> (rechts) > Content Width op <strong>600px</strong>.</div></div>
+            <div class="step"><div class="step-number">3</div><div>Klik op <strong>"Content"</strong> > Sleep <strong>"<> HTML"</strong> blok naar werkveld.</div></div>
+            <div class="step"><div class="step-number">4</div><div>Klik op blok > Plak volledige HTML-code.</div></div>
+            <div class="step"><div class="step-number">5</div><div>Onder <strong>"General"</strong> > <strong>"All Sides"</strong> op <strong>0px</strong>.</div></div>
+            <div class="ai-box">
+                <h3>🤖 AI (LLM) Sjabloon</h3>
+                <p>Upload vorig HTML-bestand. Prompt: <em>"Gebruik deze structuur voor nieuwe inhoud. Behoud Fluid CSS en afbeeldingen op 60-70%."</em></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>4. Definitieve Verzending & Send Settings</h2>
+            <div class="check-box-list">
+                <strong>Vink deze drie vakjes onderaan aan:</strong>
+                <ul>
+                    <li>☑ Gmail daily limits</li>
+                    <li>☑ CAN-SPAM Act</li>
+                    <li>☑ Spam guidelines</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5. Checklist & Statistieken</h2>
+            <div class="step"><input type="checkbox"> &nbsp; Test naar extern (Outlook/Skynet)?</div>
+            <div class="step"><input type="checkbox"> &nbsp; Sheet land op VS?</div>
+            <div class="step"><input type="checkbox"> &nbsp; Body 600px & Padding 0px?</div>
+            <div class="step"><input type="checkbox"> &nbsp; De 3 vinkjes onderaan?</div>
+            <div class="warning"><strong>Bonus (Kloon):</strong> Klik op <strong>"Clone"</strong> op het dashboard. Dit bewaart alle instellingen automatisch! Vervang bij nieuwe inhoud de HTML-code, vink de 3 vakjes opnieuw aan en verzend.</div>
+        </section>
+    </div>
+
+    <!-- ================= COMPACTE VERSIE ================= -->
+    <div id="compactVersion" class="hidden">
+        <section class="card">
+            <h2 style="text-align: center;">🚀 Snelgids (Geheugensteun)</h2>
+            <div class="compact-grid">
+                <div class="compact-card">
+                    <h4>📍 Google Sheet</h4>
+                    <ul>
+                        <li>Land: <strong>Verenigde Staten</strong></li>
+                        <li>Tijd: <strong>Brussels</strong></li>
+                        <li>Kolom A: Voornaam</li>
+                        <li>Kolom B: Email</li>
+                    </ul>
+                </div>
+                <div class="compact-card">
+                    <h4>✉️ Onderwerp</h4>
+                    <ul>
+                        <li>Eindigen op: <strong>Letter</strong></li>
+                        <li>GEEN punt of getal</li>
+                        <li>GEEN woord "Test"</li>
+                    </ul>
+                </div>
+                <div class="compact-card" style="grid-column: span 2;">
+                    <h4>🎨 MailKing Editor (Volgorde!)</h4>
+                    <ol>
+                        <li>Blank Template</li>
+                        <li>Body-menu: Breedte <strong>600px</strong></li>
+                        <li>Content-menu: Sleep <strong>HTML-blok</strong></li>
+                        <li>Plak Code + <strong>Padding 0px</strong></li>
+                    </ol>
+                </div>
+                <div class="compact-card">
+                    <h4>📤 Verzenden</h4>
+                    <ul>
+                        <li>Test naar Skynet/Outlook</li>
+                        <li>Vink <strong>3 vakjes</strong> onderaan</li>
+                        <li>Klik <strong>Send</strong></li>
+                    </ul>
+                </div>
+                <div class="compact-card">
+                    <h4>🔄 Volgende keer?</h4>
+                    <p>Gebruik de <strong>CLONE</strong> knop voor behoud van alle instellingen!</p>
+                </div>
+            </div>
+            <button class="btn-toggle" style="width: 100%; margin-top: 15px;" onclick="toggleVersion()">Terug naar Volledige Handleiding</button>
+        </section>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Diabetes Liga Midden-Limburg - Digitale Nieuwsbrief Workflow
+</footer>
+
+<script>
+    function toggleVersion() {
+        const full = document.getElementById('fullVersion');
+        const compact = document.getElementById('compactVersion');
+        const btn = document.getElementById('toggleBtn');
+        const title = document.getElementById('headerTitle');
+        const sub = document.getElementById('headerSub');
+
+        if (full.classList.contains('hidden')) {
+            full.classList.remove('hidden');
+            compact.classList.add('hidden');
+            btn.innerHTML = "Naar Snelgids (Compact)";
+            title.innerHTML = "📋 Handleiding: Nieuwsbrieven in Gmail";
+            sub.innerHTML = "Professioneel verzenden met cloudHQ & MailKing";
+            window.scrollTo(0,0);
+        } else {
+            full.classList.add('hidden');
+            compact.classList.remove('hidden');
+            btn.innerHTML = "Terug naar Volledige Handleiding";
+            title.innerHTML = "🚀 Snelgids: cloudHQ & MailKing";
+            sub.innerHTML = "De essentie voor dagelijks gebruik";
+            window.scrollTo(0,0);
+        }
+    }
+</script>
+
+</body>
+</html>
